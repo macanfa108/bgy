@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="百果宴">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <!-- 百度禁止乱码 -->
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 不之别电话号码和邮件地址 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+
+    <!-- ios -->
+    <!--添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="百果宴" />
+    <!-- 启动webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <!-- 设置状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>百果宴</title>
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sprite.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+    <!-- 头部标题栏 -->
+    <header id="header">
+        <div class="wrapper">
+            <div class="leftPart">
+                <a href="javascript:history.back();">
+                    <span class="iconfont icon-fanhui"></span>
+                </a>
+            </div>
+            <div class="title">
+                <h1>新添地址</h1>
+            </div>
+            <div class="rightPart">
+                <!-- <a href="#">
+                  <span class="iconfont icon-jia icon-2x"></span>
+              </a> -->
+            </div>
+        </div>
+    </header>
+    <!-- 头部标题栏 -->
+    <!-- 内容区 -->
+    <div class="grayCon">
+        <div class="otherInformation addAddressCon">
+            <ul>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl width-65">收货人</div>
+                        <div class="fl">
+                            <input type="text" value="叶燕芳">
+                        </div>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl width-65">联系电话</div>
+                        <div class="fl">
+                            <input type="text" value="183121069358">
+                        </div>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a href="addressSelection.html">
+                        <div class="fl">所在地区</div>
+                        <div class="fr">广东省 广州市 白云区</div>
+                        <span class="iconfont icon-fanhui1"></span>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="width-65">详细地址</div>
+                        <div class="textareaCon">
+                            <!-- <div contenteditable="true">广州市白云区金沙洲沙贝大街68号，广州画秋电子商务有限公司</div> -->
+                            <textarea>广州市白云区金沙洲沙贝大街68号，广州画秋电子商务有限公司</textarea>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="saveBtnCon">
+            <div>
+                <label for="defaultAddress">
+                    <input type="checkbox" id="defaultAddress">
+                    <span class="iconfont icon-xuanze2 icon-1x"></span>
+                    <span class="iconfont icon-xuanze1 icon-1x"></span>
+                    <span>设为默认地址</span>
+                </label>
+            </div>
+            <a href="#" class="btn-block btn-success">保存</a>
+
+        </div>
+    </div>
+    <!-- 内容区 -->
+    </div>
+
+    </div>
+    <!-- 地址栏目 -->
+    <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

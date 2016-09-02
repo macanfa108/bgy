@@ -1,0 +1,287 @@
+@charset "UTF-8";
+.productItem {
+    & .titleAndPrice {
+        & h1 {
+            color: #3b3b3b;
+            font-size: 2rem;
+        }
+    }
+    & .QRCode {
+        & .codeInfo {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+    }
+}
+//左侧通用布局
+.info {
+    margin: 15px auto;
+    line-height: 27px;
+    color: #666;
+    font-size: 1.4rem;
+    //规格
+    & .standard {
+        display: inline-block;
+        width: 60px;
+        height: 27px;
+        border: 1px solid #D7D7D7;
+        text-align: center;
+        &:nth-child(n+2) {
+            margin-left: 5px;
+        }
+    }
+    & .standard.selected {
+        border: 1px solid #f87816;
+        background: url("../images/icon2/choose.png") right bottom no-repeat;
+    }
+    //数量按钮
+    & .amountBtn {
+        display: inline-block;
+        width: 32px;
+        height: 27px;
+        text-align: center;
+        line-height: 27px;
+        border: 1px solid $inputBorderColor;
+        float: left;
+    }
+    & .reduce {
+        border-radius: 3px 0 0 3px;
+    }
+    & .productNumberInput {
+        width: 34px;
+        height: 27px;
+        line-height: 27px;
+        color: #666;
+        border-top: 1px solid $inputBorderColor;
+        border-bottom: 1px solid $inputBorderColor;
+        text-align: center;
+        float: left;
+    }
+    & .increase {
+        border-radius: 0 3px 3px 0;
+    }
+}
+//右侧通用布局
+.other {
+    margin: 15px auto;
+    line-height: 27px;
+    color: #666;
+    font-size: 1.4rem;
+    & .icon {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+//选项卡
+.wrap {
+    position: relative;
+    padding-bottom:$navbarHeight;
+    #tabs-md.tab-title {
+        width: 100%;
+        max-width: $maxWidth;
+        & ul li {
+            // display: inline-block;
+            border-top: 1px solid $borderColor;
+            border-bottom: 1px solid $borderColor;
+            background: #f0eff4;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            float: left;
+            text-align: center;
+            font-weight: bold;
+            & a {
+                display: inline-block;
+                width: 100%;
+                color: #5d5d5d;
+                font-size: 1.4rem;
+            }
+        }
+        & ul li:nth-child(1) {
+            border-right: 1px solid $borderColor;
+        }
+        & ul li.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            & a {
+                color: #2A2A2A;
+            }
+        }
+    }
+    .tab-content {
+        & .tab-item {
+            display: none;
+            &:nth-child(1) {
+                display: block;
+            }
+            /*详细信息*/
+            //  产品参数
+            & .productParameter {
+                @include flexbox();
+                padding: 20px 0;
+                & .parameter {
+                    @include flex(1);
+                    & .parameterCon {
+                        margin-left: 20px;
+                        margin-right: 0;
+                        line-height: 35px;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        color: #666;
+                        .parameterInfo {
+                            color: #75be0d;
+                        }
+                    }
+                }
+                & .productImg {
+                    @include flex(1);
+                    text-align: center;
+                    & img {
+                        max-width: 170px;
+                    }
+                }
+            }
+            //  产品图片
+            & .detailsPic img {
+                width: 100%;
+                vertical-align: top;
+            }
+            /*用户评价*/
+            //进度条
+            & .statistics {
+                margin: 3%;
+                color: #000;
+                font-size: 1.4rem;
+                // @include flexbox();
+                & .progressCon {
+                    // @include flex(1);
+                    width:100%;
+                    text-align: center;
+                    & h3{
+                      color:#666;
+                    }
+                    & .descriptionList{
+                      text-align: right;
+                      display: inline-block;
+                    }
+                    & .progressBox{
+                      text-align:left;
+                      display: inline-block;
+                      width: 60%;
+                    }
+                    & .classify {
+                        height: $commonHeight;
+                        line-height: $commonHeight;
+                        // width: 100%;
+                        margin-bottom: 12px;
+
+                    }
+                    & .progress {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        background: #ecebeb;
+                        height: $commonHeight;
+                        border-radius: 5px;
+                        & .progressBar {
+                            display: inline-block;
+                            background: #75BE0C;
+                            // width:90%;
+                            height: $commonHeight;
+                            border-radius: 5px;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            //选项卡评价
+            & .userEvaluationCon {
+                & .evaluationTitle {
+                    border-bottom: 1px solid #DEDEDE;
+                    & ul li {
+                        display: inline-block;
+                        width: 25%;
+                        float: left;
+                        text-align: center;
+                        padding: 10px 0;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        color: #999;
+                        position: relative;
+                    }
+                    & ul li.active:after {
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                        height: 2px;
+                        background: #6CB53B;
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                    }
+                    & .num {
+                        display: block;
+                    }
+                }
+                & .assess-wrapper {
+                    padding: 10px;
+                    border-bottom: 1px solid #ccc;
+                    // @include flexbox();
+                }
+                & .user-portrait{
+                  text-align: center;
+                }
+                & .assessCon {
+                    // margin-left: 10px;
+                    font-size: 1.4rem;
+                    color: #666;
+                    // @include flex(1);
+                    & .user-name {
+
+                        float: left;
+                    }
+                    & .assess-date {
+                        font-size: 1.2rem;
+                        color: #999;
+                        float: right;
+                    }
+                    & .assess-bottom{
+                      margin-top:8px;
+                    }
+                    & .comment-item-star {
+                        background: url("../images/icon2/z10-star1.png") repeat-x;
+                        background-size: 18px;
+                        width: 90px;
+                        height: 18px;
+                        display: inline-block;
+                    }
+                    & .real-star{
+                      background: url("../images/icon2/z11-star.png") repeat-x;
+                      background-size: 18px;
+                      width: 90px;
+                      height: 18px;
+                      display: inline-block;
+                    }
+                    & .assess-content{
+                      margin-top: 5px;
+                      margin-bottom: 0px;
+                    }
+
+                    & .comment-stars-width1{
+                      width:18px;
+                    }& .comment-stars-width2{
+                      width: 36px;
+                    }& .comment-stars-width3{
+                      width: 54px;
+                    }& .comment-stars-width4{
+                      width: 72px;
+                    }
+                    & .comment-stars-width5{
+                      width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}

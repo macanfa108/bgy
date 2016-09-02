@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="百果宴">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <!-- 百度禁止乱码 -->
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 不之别电话号码和邮件地址 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+
+    <!-- ios -->
+    <!--添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="百果宴" />
+    <!-- 启动webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <!-- 设置状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>百果宴</title>
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sprite.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- 头部标题栏 -->
+  <header id="header">
+      <div class="wrapper">
+          <div class="leftPart">
+              <a href="javascript:history.back();">
+                  <span class="iconfont icon-fanhui"></span>
+              </a>
+          </div>
+          <div class="title">
+              <h1>购物车</h1>
+          </div>
+          <div class="rightPart">
+            <a href="#">
+                  <span class="iconfont icon-ico-user icon-2x"></span>
+              </a>
+          </div>
+      </div>
+  </header>
+  <!-- 头部标题栏 -->
+  <div class="goodsCon clearfix" id="OrderForm">
+    <!-- 空购物车 -->
+    <section class="emptyCarCon">
+      <img src="images/icon2/emptyCar.png">
+      <p class="emptyTitle">我的果篮空空的</p>
+      <p class="emptyDescription">有种淡淡的忧伤</p>
+      <a class="emptyBtn" href="index.html">去逛逛</a>
+    </section>
+    <ul>
+      <li class="goodsItem clearfix">
+          <label class="checkBox">
+            <input type="checkbox" name="subBox" checked="true">
+            <span class="icon-z8-gou1"></span>
+          </label>
+          <div class="goodsPic">
+            <a href="#">
+              <img src="images/products/car1.jpg">
+            </a>
+          </div>
+          <div class="goodsInfo">
+            <a href="#">
+              <h2 class="goodsTitle">1新奇士澳大利亚黄橙(中)</h2>
+            </a>
+            <p class="amount">规格：12个</p>
+            <span class="price">￥<strong>78.00</strong></span>
+            <!-- 删除按钮 -->
+            <span class="iconfont icon-tianjia icon-2x icon-green icon"></span>
+            <!-- 计数器 -->
+            <div class="counter">
+              <span class="amountBtn reduce">-</span>
+              <input type="text" class="productNumberInput" value="1">
+              <span class="amountBtn increase">+</span>
+            </div>
+          </div>
+      </li>
+      <li class="goodsItem clearfix">
+        <label class="checkBox">
+          <input type="checkbox" name="subBox" checked="true">
+          <span class="icon-z8-gou1"></span>
+        </label>
+          <div class="goodsPic">
+            <a href="#">
+              <img src="images/products/car1.jpg">
+            </a>
+          </div>
+          <div class="goodsInfo">
+            <a href="#">
+              <h2 class="goodsTitle">2新奇士澳大利亚黄橙(中)</h2>
+            </a>
+            <p class="amount">规格：12个</p>
+            <span class="price">￥<strong>78.00</strong></span>
+            <!-- 删除按钮 -->
+            <span class="iconfont icon-tianjia icon-2x icon-green icon"></span>
+            <!-- 计数器 -->
+            <div class="counter" id="amountCon">
+              <span class="amountBtn reduce">-</span>
+              <input type="text" class="productNumberInput" value="2">
+              <span class="amountBtn increase">+</span>
+            </div>
+          </div>
+      </li>
+    </ul>
+  </div>
+  <!-- 底部导航栏  -->
+  <nav id="navbar">
+    <div class="col-8">
+      <div class="selectAll fl" id="selectAllBtn">
+        <label>
+        <input type="checkbox" checked="true">
+        <span class="icon-z8-gou1 icon"></span>
+        全选</label>
+      </div>
+      <div class="totalCon fr">
+        合计: <span class="price">￥<strong class="money">78.00</strong></span>元
+      </div>
+    </div>
+    <div class="col-2">
+      <a href="confirmOrder.html" class="accountBtn">去结算</a>
+    </div>
+  </nav>
+  <!-- 底部导航栏  -->
+  <!-- 弹窗提示 -->
+  <div class="modal">
+    <div class="modal-content">
+        <!-- <div class="modal-header">消息提示</div> -->
+        <div class="modal-body">
+          <span class="iconfont icon-jinggao-copy"></span>
+          亲，你真的要删除吗?
+        </div>
+        <div class="modal-footer">
+          <span class="btn" id="sureBtn">确定</span>
+          <span class="btn" id="cancelBtn">取消</span>
+        </div>
+    </div>
+  </div>
+  <!-- 弹窗提示 -->
+  <script src="js/lib/require.min.js" data-main="js/main.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>

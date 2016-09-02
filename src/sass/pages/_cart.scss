@@ -1,0 +1,182 @@
+@charset "UTF-8"; // 产品列表容器
+.goodsCon {
+    background: #fff;
+    //空购物车
+    & .emptyCarCon{
+      text-align: center;
+      padding: 10px 0px 0px;
+      display: none;
+
+      & .emptyTitle{
+        font-size: 2rem;
+        color:#666;
+
+      }
+      & .emptyDescription{
+        font-size: 1.6rem;
+        color: #999;
+        margin-bottom: 10px;
+
+      }
+      & .emptyBtn{
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #F77618;
+        color: #fff;
+        font-size: 1.6rem;
+        border-radius: 5px;
+
+      }
+    }
+    //订单列表
+    & .goodsItem {
+        border-top: 1px solid #E0E0E0;
+        padding: 5px;
+        position: relative;
+        // @include flexbox();
+        & .checkBox {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 32px 0;
+            cursor: pointer;
+            // & label{
+            //   display:inline-block;
+            //   width:100%;
+            //   line-height: 50px;
+            //   padding:0px 10px;
+            //   cursor: pointer;
+            // }
+            & input[type="checkbox"] {
+                //定位隐藏真正的表单
+                position: absolute;
+                left: -20px;
+                opacity: 0;
+                cursor: pointer;
+            }
+            & input[type="checkbox"]:checked~span {
+                background-position: -139px -96px;
+            }
+        }
+        & .goodsPic {
+            display: inline-block;
+            vertical-align: middle;
+            a {
+                display: inline-block;
+            }
+        }
+        & .goodsInfo {
+            display: inline-block;
+            vertical-align: middle;
+            & .goodsTitle {
+                cursor: pointer;
+                font-size: 1.6rem;
+                color: #666;
+                width: 162px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            & .amount {
+                font-size: 1.4rem;
+                color: #999;
+                margin-botom: 8px;
+            }
+        }
+        & .icon {
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            cursor: pointer;
+
+        }
+        // 计数器
+        & .counter {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            //数量按钮
+            & .amountBtn {
+                display: inline-block;
+                width: 32px;
+                height: 27px;
+                text-align: center;
+                line-height: 27px;
+                border: 1px solid $inputBorderColor;
+                float: left;
+            }
+            & .reduce {
+                border-radius: 3px 0 0 3px;
+            }
+            & .productNumberInput {
+                width: 34px;
+                height: 27px;
+                line-height: 27px;
+                color: #666;
+                border-top: 1px solid $inputBorderColor;
+                border-bottom: 1px solid $inputBorderColor;
+                text-align: center;
+                float: left;
+            }
+            & .increase {
+                border-radius: 0 3px 3px 0;
+            }
+        }
+    }
+    & .goodsItem:nth-child(1) {
+        border-top: 0;
+    }
+}
+//底部固定栏
+#navbar {
+    overflow: hidden;
+    font-size: 1.4rem;
+    color: #666;
+    & .selectAll {
+        line-height:$navbarHeight2;
+        position: relative;
+        & .icon {
+            position: relative;
+            top: 5px;
+        }
+        & label {
+            display: inline-block;
+            width: 100%;
+            line-height: $navbarHeight2;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+        & input[type="checkbox"] {
+            //定位隐藏真正的表单
+            position: absolute;
+            /* left: -20px; */
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+        & input[type="checkbox"]:checked~span {
+            background-position: -139px -96px;
+        }
+    }
+    & .totalCon {
+        height: $navbarHeight2;
+        line-height:$navbarHeight2;
+        padding: 0 5px;
+        color: #a79a9a;
+        font-weight: bold;
+    }
+    & .accountBtn {
+        display: inline-block;
+        width: 100%;
+        height: $navbarHeight2;
+        line-height:$navbarHeight2;
+        text-align: center;
+        color: #fff;
+        font-size: 1.4rem;
+        background: #F87618;
+    }
+}

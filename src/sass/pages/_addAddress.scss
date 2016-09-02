@@ -1,0 +1,54 @@
+@charset "UTF-8"; // 自定义下拉选框
+.select {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    line-height: 45px;
+    padding-left: 10px;
+    border-bottom: 1px solid #eee;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.grayCon {
+    background: #eee;
+}
+.addAddressCon {
+    & .otherItem input {
+        width: 130%;
+        color: #999;
+    }
+    & .textareaCon{
+      margin-top: 10px;
+    }
+    & textarea {
+        width: 100%;
+        color: #999;
+        resize: none;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-all;
+
+    }
+}
+.saveBtnCon {
+    padding: 10px;
+    background: #fff;
+    margin-top: 15px;
+    & label {
+        width: 100%;
+        display: block;
+        padding: 10px 5px;
+        font-size: 1.4rem;
+    }
+    .iconfont.icon-xuanze1 {
+        display: none;
+    }
+    & #defaultAddress:checked~.iconfont.icon-xuanze1 {
+        color: #f87816;
+        display: inline-block;
+    }
+    & #defaultAddress:checked~.iconfont.icon-xuanze2 {
+        display: none;
+    }
+}

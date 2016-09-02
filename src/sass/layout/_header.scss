@@ -1,0 +1,134 @@
+@charset "utf-8";
+#header {
+	background-color: $headerColor;
+	font-size: 1.4rem;
+	color: #fff;
+	width: 100%;
+	max-width: $maxWidth;
+	min-width: $minWidth;
+	height: 45px;
+	line-height: 45px;
+	margin: 0 auto;
+	font-family: 'microsoft yahei';
+	font-size: 1.6rem;
+	//雪碧图坐标位置
+	& .icon-pos {
+		position: relative;
+		top: 5px;
+	}
+	& .wrapper {
+		margin: 0 10px;
+		@include flexbox();
+		flex-flow: row wrap;
+		& .leftPart {
+			@include flex(1);
+			height: 45px;
+			& a {
+				color: #fff;
+				height: 100%;
+			}
+			& .location-icon {
+				position: relative;
+				top: 6px;
+			}
+			& .city {
+				font-size: 1.4rem;
+			}
+		}
+		& .title {
+			@include flex(3);
+			& h1 {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-size: 1.8rem;
+				font-weight: normal;
+			}
+			& .text_indent {
+				background: url('../images/icon/title.png') no-repeat;
+				text-indent: -9999px;
+				background-position: center center;
+			}
+		}
+		& .rightPart {
+			@include flex(1);
+			height: 45px;
+			text-align: right;
+			& a {
+				display: inline-block;
+				color: #fff;
+				height: 100%;
+				width: 100%;
+			}
+			& .icon-searchBtn {
+				position: relative;
+				top: 6px;
+				right: 0;
+			}
+			& .icon-sortBtn {
+				position: relative;
+				top: 6px;
+				right: 0;
+			}
+		}
+
+	}
+}
+#header2 {
+	background-color: $headerColor;
+	font-size: 1.4rem;
+	color: #fff;
+	width: 100%;
+	max-width: $maxWidth;
+	min-width: $minWidth;
+	height: 45px;
+	line-height: 45px;
+	margin: 0 auto;
+	font-family: 'microsoft yahei';
+	font-size: 1.6rem;
+	& .wrapper {
+		margin: 0 10px;
+		& a {
+			color: #fff;
+			height: 100%;
+		}
+		& .searchCon {
+			line-height: 45px;
+			& input {
+				display: inline-block;
+				vertical-align: middle;
+				width: 100%;
+				// max-height: 30px;
+				// height: 30px;
+				line-height: 30px;
+				// line-height: 30px;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-ms-border-radius: 10px;
+				border-radius: 10px;
+				padding-left: 3rem;
+				// font-size: 1.2rem;
+				color: #999;
+				padding: 0px 0px 0px 34px;
+
+			}
+			& .posIcon{
+				position: absolute;
+				left: 10px;
+				top: 2px;
+				color: #999;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			& .searchBtn {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				margin: 0 5px;
+				font-size: 1.6rem;
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="百果宴">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <!-- 百度禁止乱码 -->
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 不之别电话号码和邮件地址 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+
+    <!-- ios -->
+    <!--添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="百果宴" />
+    <!-- 启动webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <!-- 设置状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>百果宴</title>
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sprite.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="leftPart">
+                <a href="javascript:history.back();">
+                    <span class="iconfont icon-fanhui"></span>
+                </a>
+            </div>
+            <div class="title">
+                <h1>确认订单</h1>
+            </div>
+            <div class="rightPart"></div>
+        </div>
+    </header>
+    <!-- 内容区 -->
+    <div class="confirmCon">
+        <a href="addressManagement.html">
+            <div class="address">
+                <div class="addressInfo">
+                    <div class="user">
+                        <span class="userName">叶燕芳</span>
+                        <span class="addressStatus">默认</span>
+                    </div>
+                    <div class="area">广东省 广州市 白云区</div>
+                    <div class="detailedAddress">广州市白云区金沙洲沙贝大街68号，广州画秋电子商务有限公司</div>
+                    <div class="telphoneNumber">137****4974</div>
+                </div>
+                <span class="iconfont icon-fanhui1"></span>
+            </div>
+        </a>
+        <!-- 产品部分 -->
+        <a href="#">
+          <div class="orderList">
+              <ul>
+                  <li class="listItem">
+                      <div class="productMsg clearfix">
+                          <a href="#" class="fl">
+                              <img src="images/products/car1.jpg">
+                          </a>
+                          <div class="orderInfo">
+                              <a href="#"><h3 class="title">新西兰柠檬</h3></a>
+                              <p class="standard">200g <span class="num fr">x1</span></p>
+                              <span class="price">￥68.00</span>
+                          </div>
+                          <span class="iconfont icon-fanhui1"></span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </a>
+
+        <!-- 其他 -->
+        <div class="otherInformation">
+            <ul>
+                <li class="otherItem">
+                    <a href="#">
+                        <div class="fl">支付方式</div>
+                        <div class="fr">在线支付</div>
+                        <span class="iconfont icon-fanhui1"></span>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a href="#">
+                        <div class="fl">使用优惠券(0)</div>
+                        <div class="fr">请选择</div>
+                        <span class="iconfont icon-fanhui1"></span>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl">商品总价</div>
+                        <div class="fr price">￥68.00</div>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl">运费</div>
+                        <div class="fr price">￥10.00</div>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl">优惠券抵扣</div>
+                        <div class="fr deduction">-￥10.00</div>
+                    </a>
+                </li>
+                <li class="otherItem">
+                    <a>
+                        <div class="fl">给卖家留言:</div>
+                        <div class="fl">发圆通！谢谢</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <!-- 底部导航栏  -->
+    <nav id="navbar">
+        <div class="col-7">
+            <div class="totalCon fr">
+                <span>共1件</span> 总金额: <span class="price"><strong>78.00</strong></span>元
+            </div>
+        </div>
+        <div class="col-3">
+            <a href="waitingForPayment.html" class="accountBtn">提交订单</a>
+        </div>
+    </nav>
+    <!-- 底部导航栏  -->
+    <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

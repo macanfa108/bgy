@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.addressSelectionCon {
+    background: #eee;
+    padding-top: 20px;
+}
+.selectionCon {
+    background: #fff;
+    padding: 10px 0px;
+    & select {
+        background: #fff;
+        width: 100%;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        color: #666;
+        font-size: 1.4rem;
+    }
+    & select:nth-child(1) {
+        border-top: 0;
+    }
+}

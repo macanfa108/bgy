@@ -1,0 +1,114 @@
+@charset "UTF-8";
+.confirmCon{
+  background:#eee;
+  font-size: 1.4rem;
+  color: #C2C2C2;
+  font-weight: bold;
+  margin-bottom:$navbarHeight2;
+  &　a{
+    color:#C2C2C2;
+  }
+  //箭头
+  & .iconfont{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -9px;
+    color:#C2C2C2;
+  }
+}
+
+.address{
+  background:#fff;
+  padding:10px 25px 10px 10px;
+  position: relative;
+  margin-bottom:10px;
+  color:#c2c2c2;
+  & .user{
+    margin-bottom: 10px;
+  }
+  & .userName{
+    color: #7F7F7F;
+    margin-right: 10px;
+  }
+  & .addressStatus{
+    background: #76BE0E;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-weight: normal;
+  }
+  & .area{
+    margin-bottom:10px;
+  }
+  & .detailedAddress{
+    margin-bottom:10px;
+  }
+  & .telphoneNumber{
+    margin-bottom:10px;
+  }
+  & .iconfont-group{
+    font-weight: normal;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color:#7F7F7F;
+    & .iconfont:not(:last-child){
+      margin-right:10px;
+    }
+  }
+}
+
+//其他信息
+.otherInformation{
+
+  background:#fff;
+  overflow: hidden;
+  padding:10px;
+  font-size: 1.4rem;
+    color: #C2C2C2;
+    font-weight: bold;
+  & .iconfont {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -9px;
+    color: #C2C2C2;
+}
+  & .otherItem{
+    position: relative;
+    border-bottom:1px solid #E5E5E5;
+  }
+  & .otherItem:last-child{
+    border-bottom:none;
+  }
+  & a{
+    display: inline-block;
+    // overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    padding:12px 20px 8px 0px;
+/* height: 40px; */
+  }
+  & .price{
+    font-size: 1.6rem;
+    color: #FF8700;
+    font-weight: normal;
+  }
+  & .deduction{
+    font-size: 1.6rem;
+    color: #909090;
+    font-weight: normal;
+  }
+}

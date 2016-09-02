@@ -1,0 +1,49 @@
+@charset "UTF-8";
+.regionCon {
+    font-size: 1.4rem;
+    color: #666;
+    & > h5 {
+        margin: 0;
+        padding: 10px;
+        background: #f1f1f1;
+        line-height: inherit;
+        line-height: 22px;
+    }
+    & > p {
+        margin: 0;
+        padding: 10px 20px;
+    }
+    & a {
+        font-size: 1.4rem;
+        color: #666;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            //调用混合制作三角形边框
+            @include border(10px,10px,1px,#a7a7a7);
+        }
+    }
+    & .regionList {
+      &>ul{
+        margin:0px 10px;
+        &>li.item{
+          border-bottom: 1px solid #f1f1f1;
+          line-height: 42px;
+          // height: 42px;
+          & ul{
+            display: none;
+          }
+          & ul li{
+            text-indent: 5px;
+            color:#333;
+          }
+        }
+      }
+    }
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+//制作三角形边框
+@mixin border($width:20px,$height:20px,$borderWidth:4px,$borderColor:red) {
+    width:$width;
+    height:$height;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform: rotate(45deg);
+    border: $borderWidth solid $borderColor;
+    border-left: 0;
+    border-bottom: 0;
+}
+@mixin translate($x:-50%,$y:-50%) {
+  -webkit-transform: translate($x,$y);
+  -moz-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  transform: translate($x,$y);
+}
+//兼容弹性盒模型
+@mixin flexbox() {
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display:box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  box-flex:  $values;
+  -webkit-flex:  $values;
+  -moz-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}

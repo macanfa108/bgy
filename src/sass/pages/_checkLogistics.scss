@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.logisticsProcessCon{
+  background:#eee;
+  color:#999;
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  & .logisticsHeader{
+    background: #fff;
+    padding:15px;
+    margin-bottom: 10px;
+  }
+  & .logisticsProducts{
+    background: #fff;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    & .productMessage{
+      padding-left: 93px;
+      & .title{
+        color:#333;
+        margin:0px 0px 10px 0px;
+        width:100%;
+        overflow: hidden;
+         white-space:nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  & .orderMessage{
+    background: #fff;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    & .item{
+      padding:10px 0px;
+    }
+  }
+
+  & .logisticsProcess{
+    padding:15px;
+    background: #fff;
+    & .processItem{
+      border-left: 1px solid #ccc;
+      margin-left:10px;
+      padding:10px 0px 10px 20px;
+      position: relative;
+    }
+    & .processItem::before{
+      content: '';
+      display: inline-block;
+      width:15px;height:15px;
+      background:#76be0e;
+      border-radius: 50%;
+      position:absolute;
+      top:0px;
+      left:-8px;
+    }
+  }
+}

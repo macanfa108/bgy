@@ -4,6 +4,7 @@ require.config({
         "jquery": "lib/jquery.min",
         "jquery.Swiper": "plugs/swiper-3.3.1.jquery.min",
         "jquery.lazyload": "plugs/jquery.lazyload.min",
+        "layer":"plugs/layer",
         // "iscroll": "plugs/iscroll",
         "commonObj": "view/commonObj",
         "validator": "view/validator"
@@ -21,7 +22,7 @@ require.config({
     }
 });
 //依赖关系的顺序要一一对应啊！坑深勿跳
-require(["jquery", "commonObj","validator", "jquery.Swiper", "jquery.lazyload"], function($, commonObj,validator) {
+require(["jquery", "commonObj","validator", "layer","jquery.Swiper", "jquery.lazyload"], function($, commonObj,validator,layer) {
     $(function() {
 
         /*轮播初始化*/
@@ -297,5 +298,48 @@ require(["jquery", "commonObj","validator", "jquery.Swiper", "jquery.lazyload"],
 
         /*我的订单页面*/
         commonObj.tabs($("#order"));
+
+        /*我的收藏页面*/
+        commonObj.slideToDelete();
+        /*个人资料页*/
+        //修改头像
+        $("#avatar").on("click",function(){
+          alert("修改头像功能！待开发！");
+        });
+        //修改昵称
+        $("#nickname").on("click",function(){
+          var html=$("#changeNickname").html();
+          layer.open({
+            anim:"up",
+            type:0,
+            // closeBtn: false,
+            shadeClose: true,
+            content:html,
+            btn:['确认','取消'],
+            yes: function(index){
+              var nicknameInput=$("#nicknameInput").val();//输入框的值
+              //$.ajax();
+              layer.open({content: '先执行ajax异步修改，之后弹窗提示结果!input值：'+nicknameInput});
+            }
+          });
+        });
+        //修改性别
+        $("#Sex").on("click",function(){
+          var changeSexHtml=$("#changeSex").html();
+          layer.open({
+            anim:"up",
+            type:0,
+            shadeClose:true,
+            content:changeSexHtml,
+            btn:['确定','取消'],
+            yes:function(index){
+              var changeSexInput=$("input:radio[name='sex']:checked").val();//输入框的值
+              //$.ajax();
+              layer.open({
+                content:'修改成功!您选择的是'+changeSexInput
+              });
+            }
+          });
+        });
     });
 });

@@ -18,6 +18,14 @@
   -ms-transform: translate($x,$y);
   transform: translate($x,$y);
 }
+//旋转
+@mixin rotate($deg:180deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform:rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
 //兼容弹性盒模型
 @mixin flexbox() {
 

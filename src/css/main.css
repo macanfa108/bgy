@@ -1785,8 +1785,11 @@ body {
     padding: 0px 10px; }
     .personalCenterCon .list-group .list-item {
       position: relative;
-      border-bottom: 1px solid #DDD;
-      padding: 13px 0px; }
+      border-bottom: 1px solid #DDD; }
+      .personalCenterCon .list-group .list-item > a {
+        display: inline-block;
+        width: 100%;
+        padding: 13px 0px; }
       .personalCenterCon .list-group .list-item .itemName {
         font-size: 1.4rem;
         color: #323232;
@@ -1803,3 +1806,281 @@ body {
         transform: rotate(180deg); }
     .personalCenterCon .list-group .list-item:last-child {
       border: none; }
+
+.line-wrapper {
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  border-bottom: 1px solid #eee; }
+  .line-wrapper .line-scroll-wrapper {
+    white-space: nowrap;
+    height: 108px;
+    clear: both; }
+  .line-wrapper .line-normal-wrapper {
+    display: inline-block;
+    /* line-height: 100px; */
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 320px; }
+    .line-wrapper .line-normal-wrapper .line-normal-avatar-wrapper {
+      width: 100px;
+      float: left;
+      margin-left: 12px; }
+    .line-wrapper .line-normal-wrapper .line-normal-avatar-wrapper img {
+      width: 85px;
+      height: 85px; }
+    .line-wrapper .line-normal-wrapper .line-normal-left-wrapper {
+      float: left;
+      position: relative; }
+      .line-wrapper .line-normal-wrapper .line-normal-left-wrapper .iconfont {
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        margin-top: -9px;
+        color: #999;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+    .line-wrapper .line-normal-wrapper .line-normal-info-wrapper {
+      float: left; }
+    .line-wrapper .line-normal-wrapper .line-normal-user-name {
+      margin-top: 7px;
+      font-size: 1.6rem;
+      color: #999;
+      font-weight: bold;
+      letter-spacing: 2px; }
+    .line-wrapper .line-normal-wrapper .line-normal-msg {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #999;
+      font-size: 1.6rem;
+      margin-top: 11px; }
+    .line-wrapper .line-normal-wrapper .line-normal-price {
+      margin-top: 11px; }
+  .line-wrapper .line-btn-delete {
+    float: left;
+    width: 75px;
+    height: 100%;
+    display: none; }
+    .line-wrapper .line-btn-delete button {
+      width: 100%;
+      height: 100%;
+      background: red;
+      border: none;
+      font-size: 2rem;
+      font-family: 'Microsoft Yahei';
+      color: #fff; }
+
+.discountCouponCon {
+  background: #f6f9fc;
+  padding: 10px;
+  width: 100%; }
+  .discountCouponCon .coupon {
+    padding-top: 23%;
+    background: url("../images/icon2/youhuiquan2.png") no-repeat;
+    background-position: left top;
+    background-size: contain;
+    position: relative; }
+    .discountCouponCon .coupon .specialOffers {
+      position: absolute;
+      right: 7%;
+      top: 9%; }
+      .discountCouponCon .coupon .specialOffers .parValue {
+        font-size: 8.2rem;
+        color: #76be0e;
+        display: inline-block;
+        vertical-align: top; }
+      .discountCouponCon .coupon .specialOffers .otherInfo {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px; }
+      .discountCouponCon .coupon .specialOffers .yuan {
+        font-size: 3.6rem;
+        vertical-align: top; }
+      .discountCouponCon .coupon .specialOffers .text {
+        width: 1.5rem;
+        font-size: 1.4rem;
+        display: inline-block; }
+      .discountCouponCon .coupon .specialOffers .immediateUse {
+        display: block;
+        background-color: #76be0e;
+        text-align: center;
+        color: #fff;
+        padding: 3px 4px;
+        border-radius: 3px; }
+      .discountCouponCon .coupon .specialOffers .footerInfo {
+        margin-top: -5px;
+        text-align: center;
+        color: #999;
+        font-size: 1.2rem; }
+        .discountCouponCon .coupon .specialOffers .footerInfo > p {
+          margin: 0px; }
+      .discountCouponCon .coupon .specialOffers .rangeOfUse {
+        color: #666;
+        font-size: 1.4rem;
+        font-weight: bold;
+        position: relative; }
+      .discountCouponCon .coupon .specialOffers .rangeOfUse:after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 1px;
+        background: #666;
+        position: absolute;
+        top: 50%;
+        right: 15px; }
+      .discountCouponCon .coupon .specialOffers .rangeOfUse:before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 1px;
+        background: #666;
+        position: absolute;
+        top: 50%;
+        left: 15px; }
+
+.messageCon {
+  background: #F0F0F0;
+  padding-bottom: 1px; }
+  .messageCon .messageItem {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px; }
+    .messageCon .messageItem .messageInfo {
+      color: #666;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.9rem;
+      margin: 0px 0px 10px 0px; }
+    .messageCon .messageItem .time {
+      color: #999;
+      font-size: 1.2rem; }
+
+.listCon {
+  padding: 10px 0 10px 20px;
+  background: #fff;
+  position: relative;
+  z-index: 2; }
+
+.list {
+  line-height: 45px;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: bold; }
+  .list .item {
+    padding-right: 30px;
+    border-bottom: 1px solid #ddd;
+    position: relative; }
+    .list .item .name {
+      color: #323232; }
+    .list .item .img {
+      border: none;
+      width: 40px;
+      height: 40px; }
+    .list .item .icon-xiangyou {
+      position: absolute;
+      right: 15px; }
+  .list .item:last-child {
+    border: none; }
+
+.hidden {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  z-index: 1; }
+
+/*layer插件中自定义样式必须放在优先级高的地方才有效*/
+body .modify {
+  font-size: 1.4rem;
+  color: #999; }
+  body .modify input[name='nickname'] {
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid #76be0e;
+    margin: 10px auto; }
+  body .modify .sexLabel {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #eee;
+    text-align: left; }
+    body .modify .sexLabel .iconfont {
+      opacity: 0;
+      margin-right: 10px; }
+  body .modify input[name="sex"]:checked ~ .iconfont {
+    opacity: 1;
+    color: #76be0e; }
+
+.logisticsProcessCon {
+  background: #eee;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: bold; }
+  .logisticsProcessCon .logisticsHeader {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px; }
+  .logisticsProcessCon .logisticsProducts {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd; }
+    .logisticsProcessCon .logisticsProducts .productMessage {
+      padding-left: 93px; }
+      .logisticsProcessCon .logisticsProducts .productMessage .title {
+        color: #333;
+        margin: 0px 0px 10px 0px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+  .logisticsProcessCon .orderMessage {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd; }
+    .logisticsProcessCon .orderMessage .item {
+      padding: 10px 0px; }
+  .logisticsProcessCon .logisticsProcess {
+    padding: 15px;
+    background: #fff; }
+    .logisticsProcessCon .logisticsProcess .processItem {
+      border-left: 1px solid #ccc;
+      margin-left: 10px;
+      padding: 10px 0px 10px 20px;
+      position: relative; }
+    .logisticsProcessCon .logisticsProcess .processItem::before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: #76be0e;
+      border-radius: 50%;
+      position: absolute;
+      top: 0px;
+      left: -8px; }
+
+@media screen and (max-width: 360px) {
+  .discountCouponCon .specialOffers {
+    right: 0% !important;
+    top: 0% !important; }
+    .discountCouponCon .specialOffers .parValue {
+      font-size: 4.4rem !important; }
+    .discountCouponCon .specialOffers .otherInfo {
+      margin-top: 0px !important; }
+    .discountCouponCon .specialOffers .yuan {
+      font-size: 2.4rem !important; }
+    .discountCouponCon .specialOffers .text {
+      font-size: 0.8rem !important; }
+    .discountCouponCon .specialOffers .footerInfo {
+      font-size: 0.9rem !important; }
+    .discountCouponCon .specialOffers .rangeOfUse {
+      font-size: 1rem !important; }
+    .discountCouponCon .specialOffers .rangeOfUse:after {
+      width: 20px !important;
+      right: 10px !important; }
+    .discountCouponCon .specialOffers .rangeOfUse:before {
+      width: 20px !important;
+      left: 10px !important; } }

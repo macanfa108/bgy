@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.line-wrapper {
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+
+    //滚动区域
+    & .line-scroll-wrapper {
+        white-space: nowrap;
+        height: 108px;
+        clear: both;
+    }
+    //内容区
+    & .line-normal-wrapper {
+        display: inline-block;
+        /* line-height: 100px; */
+        float: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-width: 320px;
+
+        .line-normal-avatar-wrapper {
+            width: 100px;
+            float: left;
+            margin-left: 12px;
+        }
+
+        .line-normal-avatar-wrapper img {
+            width: 85px;
+            height: 85px;
+        }
+
+        .line-normal-left-wrapper {
+            float: left;
+            // overflow: hidden;
+            position: relative;
+
+            & .iconfont{
+              position: absolute;
+              right: -14px;
+              top:50%;
+              margin-top:-9px;
+              color: #999;
+              @include rotate();
+            }
+        }
+
+        .line-normal-info-wrapper {
+            float: left;
+        }
+
+        .line-normal-user-name {
+            margin-top: 7px;
+            font-size: 1.6rem;
+            color: #999;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .line-normal-msg {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #999;
+            font-size: 1.6rem;
+            margin-top: 11px;
+        }
+
+        .line-normal-price {
+            margin-top: 11px;
+        }
+    }
+    //内容区域结束
+    //删除按钮
+    & .line-btn-delete {
+        float: left;
+        width: 75px;
+        height: 100%;
+        display: none;
+        & button {
+            width: 100%;
+            height: 100%;
+            background: red;
+            border: none;
+            font-size: 2rem;
+            font-family: 'Microsoft Yahei';
+            color: #fff;
+        }
+    }
+
+}

@@ -67,7 +67,11 @@
     & .list-item{
       position: relative;
       border-bottom:1px solid #DDD;
-      padding:13px 0px;
+      &>a{
+        display: inline-block;
+        width:100%;
+        padding:13px 0px;
+      }
       & .itemName{
         font-size: 1.4rem;
         color: #323232;

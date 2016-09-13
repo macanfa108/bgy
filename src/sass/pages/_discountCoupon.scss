@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.discountCouponCon {
+    background: #f6f9fc;
+    padding: 10px;
+    width: 100%;
+    // outline: 1px solid #000;
+    & .coupon {
+        //使用padding-top百分比继承技巧实现自适应背景大小
+        padding-top: 23%;
+        background: url("../images/icon2/youhuiquan2.png") no-repeat;
+        background-position: left top;
+        background-size: contain;
+        // outline: 1px solid red;
+        position: relative;
+        //右侧部分
+        & .specialOffers {
+            position: absolute;
+            right:7%;
+            top:9%;
+            // outline: 1px solid #ccc;
+            & .parValue {
+                font-size: 8.2rem;
+                color: #76be0e;
+                display: inline-block;
+                vertical-align: top;
+            }
+            & .otherInfo {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 15px;
+            }
+            & .yuan {
+                font-size: 3.6rem;
+                vertical-align: top;
+            }
+            & .text {
+                width: 1.5rem;
+                font-size: 1.4rem;
+                display: inline-block;
+            }
+            & .immediateUse {
+
+                display: block;
+                background-color: #76be0e;
+                text-align: center;
+                color: #fff;
+                padding: 3px 4px;
+                border-radius: 3px;
+            }
+            & .footerInfo {
+              margin-top: -5px;
+              text-align: center;
+              color: #999;
+              font-size: 1.2rem;
+              &>p{
+                margin:0px;
+              }
+            }
+            & .rangeOfUse {
+                color: #666;
+                font-size: 1.4rem;
+                font-weight: bold;
+                position: relative;
+            }
+            & .rangeOfUse:after {
+                content: "";
+                display: inline-block;
+                width: 25px;
+                height: 1px;
+                background: #666;
+                position: absolute;
+                top: 50%;
+                right: 15px;
+            }
+            & .rangeOfUse:before {
+                content: "";
+                display: inline-block;
+                width: 25px;
+                height: 1px;
+                background: #666;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+            }
+        }
+    }
+}

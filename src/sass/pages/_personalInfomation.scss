@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.listCon {
+    padding: 10px 0 10px 20px;
+    background: #fff;
+    position: relative;
+    z-index:2;
+}
+.list {
+    // outline: 1px solid red;
+    line-height: 45px;
+    color: #999;
+    font-size: 1.4rem;
+    font-weight: bold;
+    & .item {
+        padding-right: 30px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        & .name{
+          color:#323232;
+        }
+        & .img{
+          border: none;
+          width:40px;
+          height:40px;
+        }
+        & .icon-xiangyou{
+          position: absolute;
+          right:15px;
+        }
+    }
+    & .item:last-child{
+      border:none;
+    }
+}
+
+// 修改昵称弹出层
+//通过层级关系隐藏各个弹窗的调用内容部分
+.hidden{
+  position:absolute;
+  top:45px;
+  left:0px;
+  z-index:1;
+}
+/*layer插件中自定义样式必须放在优先级高的地方才有效*/
+body .modify{
+  font-size: 1.4rem;
+  color:#999;
+  // display: none;
+
+  & input[name='nickname']{
+    display:block;
+    width:90%;
+    border-bottom:1px solid #76be0e;
+    margin:10px auto;
+  }
+  & .sexLabel{
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #eee;
+    text-align:left;
+    & .iconfont{
+      opacity: 0;
+      margin-right: 10px;
+    }
+  }
+  & input[name="sex"]:checked~.iconfont{
+    opacity: 1;
+    color:#76be0e;
+  }
+}

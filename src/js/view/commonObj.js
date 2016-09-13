@@ -143,47 +143,125 @@ define(["jquery"], function($) {
                 })
               }
 
-        }
-        // //表单验证
-        // validInput: function() {
-        //     var noticeDom = $("#loginForm .notice");
-        //     noticeDom.html("");
-        //     //手机号码
-        //     if ($(this).data("type") == 'telPhoneNum') {
-        //         //非空
-        //         if ($(this).val().trim() == "") {
-        //             noticeDom.html('手机号码不能为空！');
-        //             return;
-        //         }
-        //         if (!$(this).val().match(/^(1(([35][0-9])|(47)|[8][01236789]))\d{8}$/)) {
-        //             var msg = "手机号码格式错误！";
-        //             noticeDom.html(msg);
-        //             console.log("错误");
-        //             return;
-        //         }
-        //         console.log("正确");
-        //         // return true;
-        //     }
-        //
-        //     //密码验证
-        //     if ($(this).data("type") == 'password') {
-        //         //非空
-        //         if ($(this).val().trim() == "" || $(this).val().length < 6 || $(this).val().length > 20) {
-        //             noticeDom.html('请设置6-20位登录密码');
-        //             return false;
-        //         }
-        //         console.log("正确");
-        //         // return true;
-        //     }
-        //     return true;
-        // },
-        // validForm:function(){
-        //   var flag=$("#loginForm :input").trigger("blur");
-        //   if(flag){
-        //     alert('提交表单');
-        //   }
-        // }
+        },
+        //我的收藏页面滑动删除
+        slideToDelete:function(){
+          var linewrapper=$(".line-wrapper");
+            // 设定每一行的宽度=屏幕宽度+按钮宽度
+            $(".line-scroll-wrapper").width(linewrapper.width() + $(".line-btn-delete").width());
+            // 设定常规信息区域宽度=屏幕宽度
+            $(".line-normal-wrapper").width(linewrapper.width());
+            // 设定文字部分宽度（为了实现文字过长时在末尾显示...）
+            $(".line-normal-msg").width(linewrapper.width() - 136);
 
+            // 获取所有行，对每一行设置监听
+            var lines = $(".line-normal-wrapper");
+            var len = lines.length;
+            var lastX, lastXForMobile;
+
+            // 用于记录被按下的对象
+            var pressedObj; // 当前左滑的对象
+            var lastLeftObj; // 上一个左滑的对象
+
+            // 用于记录按下的点
+            var start;
+
+            // 网页在移动端运行时的监听
+            for (var i = 0; i < len; ++i) {
+                lines[i].addEventListener('touchstart', function(e) {
+                  $(".line-btn-delete").show();
+                    lastXForMobile = e.changedTouches[0].pageX;
+                    pressedObj = this; // 记录被按下的对象
+
+                    // 记录开始按下时的点
+                    var touches = event.touches[0];
+                    start = {
+                        x: touches.pageX, // 横坐标
+                        y: touches.pageY // 纵坐标
+                    };
+                });
+
+                lines[i].addEventListener('touchmove', function(e) {
+                    // 计算划动过程中x和y的变化量
+                    var touches = event.touches[0];
+                    delta = {
+                        x: touches.pageX - start.x,
+                        y: touches.pageY - start.y
+                    };
+
+                    // 横向位移大于纵向位移，阻止纵向滚动
+                    if (Math.abs(delta.x) > Math.abs(delta.y)) {
+                        event.preventDefault();
+                    }
+                });
+
+                lines[i].addEventListener('touchend', function(e) {
+                    var diffX = e.changedTouches[0].pageX - lastXForMobile;
+                    if (diffX < -50) {
+                        $(pressedObj).animate({
+                            marginLeft: "-75px"
+                        }, 100); // 左滑
+                        lastLeftObj && lastLeftObj != pressedObj &&
+                            $(lastLeftObj).animate({
+                                marginLeft: "0"
+                            }, 100); // 已经左滑状态的按钮右滑
+                        lastLeftObj = pressedObj; // 记录上一个左滑的对象
+                    } else if (diffX > 50) {
+                        $(pressedObj).animate({
+                            marginLeft: "0"
+                        }, 100); // 右滑
+                        // lastLeftObj = null; // 清空上一个左滑的对象
+                    }
+                });
+            }
+
+            // 网页在PC浏览器中运行时的监听
+            for (var i = 0; i < len; ++i) {
+                $(lines[i]).bind('mousedown', function(e) {
+                  // $(".line-btn-delete").show();
+                    lastX = e.clientX;
+                    pressedObj = this; // 记录被按下的对象
+                });
+
+                $(lines[i]).bind('mouseup', function(e) {
+                    var diffX = e.clientX - lastX;
+                    if (diffX < -50) {
+                        $(pressedObj).animate({
+                            marginLeft: "-75px"
+                        }, 100); // 左滑
+                        lastLeftObj && lastLeftObj != pressedObj &&
+                            $(lastLeftObj).animate({
+                                marginLeft: "0"
+                            }, 100); // 已经左滑状态的按钮右滑
+                        lastLeftObj = pressedObj; // 记录上一个左滑的对象
+                    } else if (diffX > 50) {
+                        $(pressedObj).animate({
+                            marginLeft: "0"
+                        }, 100); // 右滑
+                        lastLeftObj = null; // 清空上一个左滑的对象
+                    }
+                });
+            }
+
+            //删除按钮事件绑定
+            $(".line-btn-delete").on("click", function() {
+                console.log(0);
+                var This=$(this);
+                //layer插件
+                layer.open({
+                    content: '您确定要删除该收藏吗？',
+                    btn: ['确定', '取消'],
+                    yes: function(index) {
+                      console.log("AJAX数据交互,成功后删除该项！");
+                        This.parents(".line-wrapper").remove();
+                        layer.close(index);
+                    }
+                });
+
+
+
+            });
+        }
 
     }
 });

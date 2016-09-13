@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.messageCon{
+  background: #F0F0F0;
+  padding-bottom: 1px;
+  & .messageItem{
+    background: #fff;
+    padding:15px;
+    margin-bottom: 10px;
+
+    & .messageInfo{
+      color:#666;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.9rem;
+      margin:0px 0px 10px 0px;
+    }
+    & .time{
+      color:#999;
+      font-size: 1.2rem;
+    }
+  }
+
+}

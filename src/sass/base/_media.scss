@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@media screen and (max-width: 360px) {
+    .discountCouponCon {
+        // background-color: blue;
+        //右侧部分
+        & .specialOffers {
+          right:0%!important;
+          top:0%!important;
+            & .parValue {
+                // background: blue;
+                font-size: 4.4rem!important;
+            }
+            & .otherInfo {
+                margin-top: 0px !important;
+            }
+            & .yuan {
+                font-size: 2.4rem!important;
+            }
+            & .text {
+                font-size: 0.8rem!important;
+            }
+            & .immediateUse {}
+            & .footerInfo {
+                font-size: 0.9rem!important;
+            }
+            & .rangeOfUse {
+                font-size: 1rem!important;;
+            }
+            & .rangeOfUse:after {
+                width: 20px!important;
+                right: 10px!important;
+            }
+            & .rangeOfUse:before {
+                width: 20px!important;
+                left: 10px!important;
+            }
+        }
+    }
+}

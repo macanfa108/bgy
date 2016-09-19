@@ -7,7 +7,8 @@ require.config({
         "layer":"plugs/layer",
         // "iscroll": "plugs/iscroll",
         "commonObj": "view/commonObj",
-        "validator": "view/validator"
+        "validator": "view/validator",
+        "WebUploader":"plugs/webuploader.min"
     },
     //加载非规范的模块(插件加载)
     shim: {　　　　
@@ -22,7 +23,7 @@ require.config({
     }
 });
 //依赖关系的顺序要一一对应啊！坑深勿跳
-require(["jquery", "commonObj","validator", "layer","jquery.Swiper", "jquery.lazyload"], function($, commonObj,validator,layer) {
+require(["jquery", "commonObj","validator", "layer","WebUploader","jquery.Swiper", "jquery.lazyload"], function($, commonObj,validator,layer,WebUploader) {
     $(function() {
 
         /*轮播初始化*/
@@ -229,6 +230,7 @@ require(["jquery", "commonObj","validator", "layer","jquery.Swiper", "jquery.laz
 
         //快捷登录
         if($("#loginForm").length){
+          // validator.init方法参数：id:需验证的表单id,btnId:该表单对应的提交按钮,callback:验证后的回调函数
           validator.init({id:"loginForm",btnId:"loginBtn",callback:function(){
             //ajax登录模拟
             $.ajax({
@@ -264,6 +266,23 @@ require(["jquery", "commonObj","validator", "layer","jquery.Swiper", "jquery.laz
         //忘记密码
         if($("#forgetPwdForm").length){
           validator.init({id:"forgetPwdForm",btnId:"forgetPwdBtn",callback:function(){
+            //ajax登录模拟
+            $.ajax({
+              type:'get',
+              url:"#",
+              dataType:'json',
+              success:function(data){
+                console.log(data);
+              },
+              error:function(data){
+                alert("出错了!");
+              }
+            });
+          }});
+        }
+        //修改密码
+        if($("#changePwdForm").length){
+          validator.init({id:"changePwdForm",btnId:"changePwdBtn",callback:function(){
             //ajax登录模拟
             $.ajax({
               type:'get',
@@ -341,5 +360,55 @@ require(["jquery", "commonObj","validator", "layer","jquery.Swiper", "jquery.laz
             }
           });
         });
+
+        /*用户帮助页面手风琴效果*/
+        $("#helpList .helpTitle").on("click",function(){
+          $(this).find(".icon-down").toggleClass("rotated");
+          $(this).next(".helpContents").slideToggle();
+        });
+        
+        /*商品评价webuploader上传图片*/
+        // 初始化Web Uploader
+        var uploader = WebUploader.create({
+          // 选完文件后，是否自动上传。
+          auto: true,
+          // swf文件路径swf: BASE_URL + '/js/Uploader.swf',
+          // 文件接收服务端。
+          server: '#',
+          // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#filePicker',
+            // 只允许选择图片文件。
+            accept: {
+              title: 'Images',
+              extensions: 'gif,jpg,jpeg,bmp,png',
+              mimeTypes: 'image/*'
+            }
+          });
+          // 当有文件添加进来的时候
+          uploader.on( 'fileQueued', function( file ) {
+            var $li = $('<div id="' + file.id +
+             '" class="file-item thumbnail">' +
+              '<img>' +
+              '<div class="info">' + file.name + '</div>' +
+              '</div>'
+            ),
+            $img = $li.find('img');
+
+            // $list为容器jQuery实例
+            $list.append( $li );
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb( file, function( error, src ) {
+              if ( error ) {
+                $img.replaceWith('<span>不能预览</span>');
+                return;
+              }
+              $img.attr( 'src', src );
+            }, thumbnailWidth, thumbnailHeight );
+          });
+
+
     });
 });

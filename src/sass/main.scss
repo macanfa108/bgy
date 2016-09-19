@@ -8,7 +8,8 @@
 ;
 //插件
 @import "component/swiper",
-        "component/iconfont"
+        "component/iconfont",
+        "component/webuploader"
 ;
 //基础样式
 @import "base/style",
@@ -39,7 +40,11 @@
         "pages/discountCoupon",
         "pages/messageCenter",
         "pages/personalInfomation",
-        "pages/checkLogistics"
+        "pages/checkLogistics",
+        "pages/aboutUs",
+        "pages/searchPage",
+        "pages/help",
+        "pages/productEvaluation"
 ;
 @import "base/media"
 ;

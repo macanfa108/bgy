@@ -50,11 +50,17 @@
       content: '';
       display: inline-block;
       width:15px;height:15px;
-      background:#76be0e;
+      background:#ccc;
       border-radius: 50%;
       position:absolute;
       top:0px;
       left:-8px;
+    }
+    & .processItem:first-child::before{
+      background:#76be0e;
+    }
+    & .processItem:first-child{
+      color:#76be0e;
     }
   }
 }

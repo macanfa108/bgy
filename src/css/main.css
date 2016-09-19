@@ -29,6 +29,9 @@
 .fr {
   float: right; }
 
+.padding {
+  padding: 10px; }
+
 .pl-5, .goods .goodsItem .goodsInfo {
   padding-left: 5px; }
 
@@ -49,6 +52,15 @@
 
 .pb-30 {
   padding-bottom: 30px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mt-45 {
+  margin-top: 45px; }
 
 .width-65 {
   width: 65px; }
@@ -165,6 +177,12 @@
 .icon-home2:before {
   content: "\e600"; }
 
+.icon-home:before {
+  content: "\e600"; }
+
+.icon-youhuiquan:before {
+  content: "\e62a"; }
+
 .icon-gouwuche:before {
   content: "\e601"; }
 
@@ -179,6 +197,12 @@
 
 .icon-bianji:before {
   content: "\e605"; }
+
+.icon-youhuiquan1:before {
+  content: "\e62b"; }
+
+.icon-xiangshang:before {
+  content: "\e62c"; }
 
 .icon-tianjia:before {
   content: "\e606"; }
@@ -217,6 +241,9 @@
   content: "\e60f"; }
 
 .icon-down:before {
+  content: "\e62d"; }
+
+.icon-down1:before {
   content: "\e610"; }
 
 .icon-xuanze1:before {
@@ -230,6 +257,9 @@
 
 .icon-tubiao1shanchuqingkong:before {
   content: "\e614"; }
+
+.icon-shangchuantupian:before {
+  content: "\e628"; }
 
 .icon-24:before {
   content: "\e615"; }
@@ -281,6 +311,15 @@
 
 .icon-fanhui1:before {
   content: "\e625"; }
+
+.icon-shangchuantupian1:before {
+  content: "\e629"; }
+
+.webuploader-pick {
+  background: #fff;
+  color: #666;
+  border-radius: 3px;
+  border: 1px solid #ddd; }
 
 html {
   font-size: 62.5%; }
@@ -392,10 +431,15 @@ input {
     padding: 5px;
     border-right: 1px solid #d7d7d7;
     float: left;
-    vertical-align: top; }
+    vertical-align: top;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
   .input_group .inputBox {
     display: inline-block;
     vertical-align: top;
+    width: 100%;
+    padding-left: 40px;
     margin-right: 0px; }
     .input_group .inputBox input {
       display: inline-block;
@@ -408,7 +452,10 @@ input {
     display: inline-block;
     border-left: 1px solid #d7d7d7;
     float: right;
-    vertical-align: top; }
+    vertical-align: top;
+    position: absolute;
+    right: 0px;
+    top: 0px; }
     .input_group .codeBtn a {
       color: #666;
       display: inline-block;
@@ -1406,29 +1453,31 @@ body {
       display: none; }
     #sortCon .tab-content .tab-item:nth-child(1) {
       display: block; }
-    #sortCon .tab-content .listBox img {
-      max-width: 85px; }
-    #sortCon .tab-content .fruitInfo {
-      margin-left: 105px;
-      position: relative; }
-      #sortCon .tab-content .fruitInfo ul li {
-        overflow: hidden;
-        margin-bottom: 15px; }
-      #sortCon .tab-content .fruitInfo h4 {
-        margin: 0;
-        font-size: 1.4rem;
-        color: #333; }
-      #sortCon .tab-content .fruitInfo .standard {
-        margin: 15px 0px 0px;
-        font-size: 1.2rem;
-        color: #999; }
-      #sortCon .tab-content .fruitInfo .price {
-        font-weight: bold; }
-      #sortCon .tab-content .fruitInfo .icon {
-        position: absolute;
-        right: 0;
-        top: 20px;
-        color: #f87618; }
+
+.listBox img {
+  max-width: 85px; }
+
+.fruitInfo {
+  margin-left: 105px;
+  position: relative; }
+  .fruitInfo ul li {
+    overflow: hidden;
+    margin-bottom: 15px; }
+  .fruitInfo h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333; }
+  .fruitInfo .standard {
+    margin: 15px 0px 0px;
+    font-size: 1.2rem;
+    color: #999; }
+  .fruitInfo .price {
+    font-weight: bold; }
+  .fruitInfo .icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    color: #f87618; }
 
 #fly {
   position: absolute;
@@ -1734,7 +1783,7 @@ body {
 /**个人中心**/
 .personalCenterCon {
   background: #eee;
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
   .personalCenterCon .bgCon {
     height: 214px;
     background: url("../images/icon2/beijing.jpg") no-repeat;
@@ -1879,68 +1928,30 @@ body {
   padding: 10px;
   width: 100%; }
   .discountCouponCon .coupon {
-    padding-top: 23%;
-    background: url("../images/icon2/youhuiquan2.png") no-repeat;
+    background: #76be0e;
     background-position: left top;
-    background-size: contain;
-    position: relative; }
-    .discountCouponCon .coupon .specialOffers {
-      position: absolute;
-      right: 7%;
-      top: 9%; }
-      .discountCouponCon .coupon .specialOffers .parValue {
-        font-size: 8.2rem;
-        color: #76be0e;
-        display: inline-block;
-        vertical-align: top; }
-      .discountCouponCon .coupon .specialOffers .otherInfo {
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 15px; }
-      .discountCouponCon .coupon .specialOffers .yuan {
-        font-size: 3.6rem;
-        vertical-align: top; }
-      .discountCouponCon .coupon .specialOffers .text {
-        width: 1.5rem;
-        font-size: 1.4rem;
-        display: inline-block; }
-      .discountCouponCon .coupon .specialOffers .immediateUse {
-        display: block;
-        background-color: #76be0e;
-        text-align: center;
-        color: #fff;
-        padding: 3px 4px;
-        border-radius: 3px; }
-      .discountCouponCon .coupon .specialOffers .footerInfo {
-        margin-top: -5px;
-        text-align: center;
-        color: #999;
-        font-size: 1.2rem; }
-        .discountCouponCon .coupon .specialOffers .footerInfo > p {
-          margin: 0px; }
-      .discountCouponCon .coupon .specialOffers .rangeOfUse {
-        color: #666;
-        font-size: 1.4rem;
+    background-size: cover;
+    outline: 1px solid red; }
+    .discountCouponCon .coupon .discountCouponText {
+      margin: 10px auto;
+      width: 204px;
+      height: 118px;
+      border: 1px solid blue;
+      color: #fff; }
+      .discountCouponCon .coupon .discountCouponText .value {
+        font-size: 6rem;
+        margin: 20px 5px; }
+      .discountCouponCon .coupon .discountCouponText .text {
+        font-size: 2rem;
+        margin: 20px 5px 10px; }
+      .discountCouponCon .coupon .discountCouponText .usableRange {
+        background: #fff;
+        color: #585e43;
+        font-size: 1.6rem;
         font-weight: bold;
-        position: relative; }
-      .discountCouponCon .coupon .specialOffers .rangeOfUse:after {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 1px;
-        background: #666;
-        position: absolute;
-        top: 50%;
-        right: 15px; }
-      .discountCouponCon .coupon .specialOffers .rangeOfUse:before {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 1px;
-        background: #666;
-        position: absolute;
-        top: 50%;
-        left: 15px; }
+        display: block;
+        padding: 5px;
+        border-radius: 5px; }
 
 .messageCon {
   background: #F0F0F0;
@@ -2056,11 +2067,131 @@ body .modify {
       display: inline-block;
       width: 15px;
       height: 15px;
-      background: #76be0e;
+      background: #ccc;
       border-radius: 50%;
       position: absolute;
       top: 0px;
       left: -8px; }
+    .logisticsProcessCon .logisticsProcess .processItem:first-child::before {
+      background: #76be0e; }
+    .logisticsProcessCon .logisticsProcess .processItem:first-child {
+      color: #76be0e; }
+
+.aboutUsCon {
+  background: #e4f5ff;
+  font-size: 1.4rem;
+  color: #7f7f7f;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 45px;
+  height: 100%; }
+  .aboutUsCon .aboutUs {
+    padding: 10px 15px; }
+  .aboutUsCon .title {
+    margin: 0px; }
+  .aboutUsCon .ourAdvantages img {
+    width: 100%; }
+
+.searchPageCon {
+  padding: 10px;
+  background: #fff; }
+  .searchPageCon .hotSearch {
+    margin-bottom: 10px;
+    color: #999;
+    font-size: 1.2rem; }
+  .searchPageCon .tile {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    color: #666;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background: #e8eaeb;
+    border-radius: 3px; }
+
+.helpList {
+  margin-top: -1px;
+  padding: 0px 10px 10px;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: bold; }
+  .helpList .helpItem {
+    margin-top: -1px; }
+  .helpList .helpTitle {
+    padding: 13px 0px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #666; }
+  .helpList .icon-down {
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+  .helpList .rotated {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .helpList .helpContents {
+    display: none;
+    padding: 10px 0px; }
+    .helpList .helpContents li {
+      padding: 5px 0px; }
+    .helpList .helpContents li::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #999;
+      border-radius: 50%;
+      margin-right: 5px; }
+
+.evaluationCon {
+  padding: 10px; }
+
+.productItems .imgCon {
+  width: 85px;
+  height: 85px; }
+.productItems .productInfomation {
+  padding-left: 95px;
+  color: #999; }
+  .productItems .productInfomation .title {
+    padding: 5px 0;
+    font-size: 1.4rem; }
+  .productItems .productInfomation .etalon {
+    font-size: 1.2rem; }
+
+.gradeCon {
+  padding: 15px 10px;
+  margin-top: 15px; }
+  .gradeCon .gradeTit {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #f87618; }
+  .gradeCon .starCon {
+    display: inline-block;
+    vertical-align: middle; }
+    .gradeCon .starCon .star {
+      background: url("../images/icon2/z10-star1.png") no-repeat;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      margin: 0px 5px; }
+    .gradeCon .starCon .star.active {
+      background: url("../images/icon2/z11-star.png") repeat-x;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      display: inline-block; }
+
+#evaluationContent {
+  width: 100%;
+  resize: none;
+  color: #999;
+  font-size: 1.4rem;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px; }
 
 @media screen and (max-width: 360px) {
   .discountCouponCon .specialOffers {

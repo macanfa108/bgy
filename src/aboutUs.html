@@ -31,14 +31,16 @@
     <link rel="Shortcut Icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/sprite.css"> -->
+    <link rel="stylesheet" href="css/sprite.css">
 
     <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 
 <body>
     <!-- 头部标题栏 -->
-    <header id="header">
+    <header id="header" class="fixed">
         <div class="wrapper">
             <div class="leftPart">
                 <a href="javascript:history.back();">
@@ -46,35 +48,30 @@
                 </a>
             </div>
             <div class="title">
-                <h1>优惠券</h1>
+                <h1>关于我们</h1>
             </div>
-            <div class="rightPart">
-                <!-- <a href="#">
-              <span class="iconfont icon-jia icon-2x"></span>
-          </a> -->
-            </div>
+            <div class="rightPart"></div>
         </div>
     </header>
     <!-- 头部标题栏 -->
-    <!-- 卡券 -->
-    <div class="discountCouponCon">
-
-        <!-- <a href="#"> -->
-            <div class="coupon clearfix">
-                
-                <!-- <img src="images/icon2/discountCoupon.png" class="discountCoupon"> -->
-                <div class="discountCouponText clearfix">
-                  <div class="fl value">30</div>
-                  <div class="fl">
-                    <div class="text">元优惠券</div>
-                    <span class="usableRange">满300使用</span>
-                  </div>
-                </div>
-            </div>
-        <!-- </a> -->
-
+    <!-- 内容区域 -->
+    <div class="aboutUsCon">
+        <div class="aboutUs">
+            <h3 class="title">商城简介：</h3>
+            <p class="text">
+              百果宴成立于2016年，是国内的网上水果购物平台，以新鲜、健康、美味为前提，精选国内外的时鲜水果，种类较多，24小时速达，方便快捷，质量保证，服务到家，让顾客享受一场美味的鲜果盛宴。
+            </p>
+            <p class="text">
+              百果宴以贴心服务为品牌核心，以顾客需求为服务，以不断创新为经营理念 。让顾客享受省心放心的购物体验。
+            </p>
+        </div>
+        <div class="ourAdvantages">
+          <img src="images/icon2/ourAdvantages.jpg">
+          <img src="images/icon2/ourAdvantages2.jpg" />
+        </div>
     </div>
-    <!-- 卡券 -->
+    <!-- 内容区域 -->
+
     <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
 </body>
 

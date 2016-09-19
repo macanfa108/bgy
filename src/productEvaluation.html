@@ -31,14 +31,13 @@
     <link rel="Shortcut Icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/sprite.css"> -->
-
+    <link rel="stylesheet" href="css/webuploader.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <!-- 头部标题栏 -->
-    <header id="header">
+    <header id="header" class="fixed">
         <div class="wrapper">
             <div class="leftPart">
                 <a href="javascript:history.back();">
@@ -46,35 +45,61 @@
                 </a>
             </div>
             <div class="title">
-                <h1>优惠券</h1>
+                <h1>商品评价</h1>
             </div>
-            <div class="rightPart">
-                <!-- <a href="#">
-              <span class="iconfont icon-jia icon-2x"></span>
-          </a> -->
-            </div>
+            <div class="rightPart"></div>
         </div>
     </header>
     <!-- 头部标题栏 -->
-    <!-- 卡券 -->
-    <div class="discountCouponCon">
+    <div class="pt-45"></div>
+    <!-- 内容区 -->
+    <div class="evaluationCon">
+      <!-- 产品区 -->
+      <div class="productItems clearfix">
+        <a href="#" class="fl">
+          <img src="images/products/car1.jpg" class="imgCon">
+        </a>
+        <div class="productInfomation">
+          <h3 class="title"><a href="#">新西兰柠檬</a></h3>
+          <p class="etalon">200g</p>
+          <div><span class="price">￥68.00</span></div>
+        </div>
+      </div>
+      <!-- 产品区 -->
+      <!-- 商品评价 -->
+      <form action="#">
 
-        <!-- <a href="#"> -->
-            <div class="coupon clearfix">
-                
-                <!-- <img src="images/icon2/discountCoupon.png" class="discountCoupon"> -->
-                <div class="discountCouponText clearfix">
-                  <div class="fl value">30</div>
-                  <div class="fl">
-                    <div class="text">元优惠券</div>
-                    <span class="usableRange">满300使用</span>
-                  </div>
-                </div>
-            </div>
-        <!-- </a> -->
+        <div class="gradeCon">
+          <span class="gradeTit">商品评价:</span>
+          <span class="starCon">
+            <span class="star active"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+          </span>
+          <input type="hidden" value="5">
+        </div>
+        <!-- 评价内容 -->
+        <div class="evaluationContentCon">
+          <textarea id="evaluationContent" name="evaluationContent" rows="8" placeholder="您的评价是我们进步的动力!"></textarea>
+        </div>
+        <!-- 图片 -->
+        <div id="uploader-demo">
+          <!--用来存放item-->
+          <div id="fileList" class="uploader-list"></div>
+          <div id="filePicker">
+            <span class="iconfont icon-shangchuantupian1 icon-2x"></span>
+            <br>
+            <div>选择图片</div>
+          </div>
+        </div>
+
+      </form>
+      <!-- 商品评价 -->
 
     </div>
-    <!-- 卡券 -->
+    <!-- 内容区 -->
     <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
 </body>
 

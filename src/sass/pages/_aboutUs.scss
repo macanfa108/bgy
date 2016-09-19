@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.aboutUsCon{
+  background:#e4f5ff;
+  font-size: 1.4rem;
+  color:#7f7f7f;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top:$headerHeight;
+  height: 100%;
+
+  & .aboutUs{
+    padding:10px 15px;
+  }
+  & .title{
+    margin:0px;
+  }
+  & .ourAdvantages img{
+    width:100%;
+  }
+}

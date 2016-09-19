@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.evaluationCon {
+    padding: 10px;
+}
+.productItems {
+    & .imgCon {
+        width: 85px;
+        height: 85px;
+    }
+    & .productInfomation {
+        padding-left: 95px;
+        color: #999;
+        & .title {
+            padding: 5px 0;
+            font-size: 1.4rem;
+        }
+        & .etalon {
+            font-size: 1.2rem;
+        }
+    }
+}
+.gradeCon {
+    padding: 15px 10px;
+    margin-top:15px;
+    & .gradeTit {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #f87618;
+    }
+    & .starCon {
+        display: inline-block;
+        vertical-align: middle;
+        & .star {
+            background: url("../images/icon2/z10-star1.png") no-repeat;
+            background-size: 25px;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin:0px 5px;
+        }
+        & .star.active{
+          background:url("../images/icon2/z11-star.png") repeat-x;
+          background-size: 25px;
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+        }
+    }
+
+}
+#evaluationContent{
+  width:100%;
+  resize:none;
+  color:#999;
+  font-size: 1.4rem;
+  padding:10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

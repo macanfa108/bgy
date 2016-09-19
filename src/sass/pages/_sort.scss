@@ -45,39 +45,39 @@
         & .tab-item:nth-child(1) {
             display: block;
         }
-        & .listBox img{
-          max-width: 85px;
-        }
-        & .fruitInfo {
 
-            margin-left:105px;
-            position:relative;
-            & ul li{
-              overflow: hidden;
-              margin-bottom: 15px;
-            }
-            & h4 {
-                margin: 0;
-                font-size: 1.4rem;
-                color: #333;
-            }
-            & .standard{
-              margin: 15px 0px 0px;
-              font-size: 1.2rem;
-              color: #999;
-            }
-            & .price{
-              font-weight: bold;
-            }
-            & .icon{
-              position:absolute;
-              right:0;top:20px;
-              color:#f87618;
-            }
-        }
     }
 }
+.listBox img{
+  max-width: 85px;
+}
+.fruitInfo {
 
+    margin-left:105px;
+    position:relative;
+    & ul li{
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    & h4 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: #333;
+    }
+    & .standard{
+      margin: 15px 0px 0px;
+      font-size: 1.2rem;
+      color: #999;
+    }
+    & .price{
+      font-weight: bold;
+    }
+    & .icon{
+      position:absolute;
+      right:0;top:20px;
+      color:#f87618;
+    }
+}
 //动态生成的加入购物车预览图
 #fly{
   position: absolute;

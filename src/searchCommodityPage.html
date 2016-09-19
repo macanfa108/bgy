@@ -31,14 +31,16 @@
     <link rel="Shortcut Icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/sprite.css"> -->
+    <link rel="stylesheet" href="css/sprite.css">
 
     <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 
 <body>
     <!-- 头部标题栏 -->
-    <header id="header">
+    <header id="header" class="fixed">
         <div class="wrapper">
             <div class="leftPart">
                 <a href="javascript:history.back();">
@@ -46,35 +48,53 @@
                 </a>
             </div>
             <div class="title">
-                <h1>优惠券</h1>
+                <h1>搜索商品标题</h1>
             </div>
-            <div class="rightPart">
-                <!-- <a href="#">
-              <span class="iconfont icon-jia icon-2x"></span>
-          </a> -->
-            </div>
+            <div class="rightPart"></div>
         </div>
     </header>
     <!-- 头部标题栏 -->
-    <!-- 卡券 -->
-    <div class="discountCouponCon">
+    <!-- 内容区域 -->
+    <div class="listBox padding mt-45">
+          <ul>
+            <li>
+              <a href="#" class="fl">
+                <img data-original="images/products/car1.jpg" src="images/products/car1.jpg">
+              </a>
+              <div class="fruitInfo">
+                <h4><a href="#">新鲜青柠檬</a></h4>
+                <p class="standard">规格:500g</p>
+                <p class="price">￥33.6元</p>
+                <!-- <span class="iconfont icon-jiarugouwuche icon-3x icon"></span> -->
+              </div>
+            </li>
+            <li>
+              <a href="#" class="fl">
+                <img data-original="images/products/car2.jpg" src="images/products/car2.jpg">
+              </a>
+              <div class="fruitInfo">
+                <h4><a href="#">新鲜青柠檬</a></h4>
+                <p class="standard">规格:500g</p>
+                <p class="price">￥33.6元</p>
+                <!-- <span class="iconfont icon-jiarugouwuche icon-3x icon"></span> -->
+              </div>
+            </li>
+            <li>
+              <a href="#" class="fl">
+                <img data-original="images/products/car1.jpg" src="images/products/car1.jpg">
+              </a>
+              <div class="fruitInfo">
+                <h4><a href="#">新鲜青柠檬</a></h4>
+                <p class="standard">规格:500g</p>
+                <p class="price">￥33.6元</p>
+                <!-- <span class="iconfont icon-jiarugouwuche icon-3x icon"></span> -->
+              </div>
+            </li>
 
-        <!-- <a href="#"> -->
-            <div class="coupon clearfix">
-                
-                <!-- <img src="images/icon2/discountCoupon.png" class="discountCoupon"> -->
-                <div class="discountCouponText clearfix">
-                  <div class="fl value">30</div>
-                  <div class="fl">
-                    <div class="text">元优惠券</div>
-                    <span class="usableRange">满300使用</span>
-                  </div>
-                </div>
-            </div>
-        <!-- </a> -->
+          </ul>
+        </div>
+    <!-- 内容区域 -->
 
-    </div>
-    <!-- 卡券 -->
     <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
 </body>
 

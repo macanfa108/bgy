@@ -29,14 +29,16 @@
       border-right: 1px solid $inputBorderColor;
       float: left;
       vertical-align: top;
-      // position: absolute;
+      position: absolute;
+      left: 0px;
+      top: 0px;
 
     }
     & .inputBox {
       display: inline-block;
       vertical-align: top;
-      // margin-left: 39px;
-      // width: 100%;
+      width: 100%;
+      padding-left: 40px;
       margin-right: 0px;
       // @include flex(1);
 
@@ -54,7 +56,9 @@
         border-left: 1px solid $inputBorderColor;
         float:right;
         vertical-align: top;
-
+        position: absolute;
+        right: 0px;
+        top: 0px;
         & a{
             color: #666;
             display: inline-block;

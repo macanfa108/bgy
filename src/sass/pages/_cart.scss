@@ -1,11 +1,12 @@
 @charset "UTF-8"; // 产品列表容器
 .goodsCon {
     background: #fff;
+    margin-bottom: 45px;
     //空购物车
     & .emptyCarCon{
       text-align: center;
       padding: 10px 0px 0px;
-      display: none;
+      // display: none;
 
       & .emptyTitle{
         font-size: 2rem;

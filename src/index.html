@@ -64,9 +64,21 @@
     <!-- 轮播 -->
     <div class="swiper-container pt-45">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/carousel/carousel01.png" width="100%" alt="绿色纯天然"></div>
-            <div class="swiper-slide"><img src="images/carousel/carousel01.png" width="100%" alt="绿色纯天然"></div>
-            <div class="swiper-slide"><img src="images/carousel/carousel01.png" width="100%" alt="绿色纯天然"></div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/carousel/carousel01.png" width="100%">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/carousel/carousel01.png" width="100%">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/carousel/carousel01.png" width="100%">
+              </a>
+            </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -74,19 +86,19 @@
     <!-- 分类图标 -->
     <nav>
         <div class="nav-icon">
-            <a href="#" class="icon-item">
+            <a href="#newGoods" class="icon-item">
                 <span class="icon-new_blue"></span>
                 <h3>新品尝鲜</h3>
             </a>
-            <a href="#" class="icon-item">
+            <a href="#indulgence" class="icon-item">
                 <span class="icon-yellow"></span>
                 <h3>特惠抢购</h3>
             </a>
-            <a href="#" class="icon-item">
+            <a href="#HOT" class="icon-item">
                 <span class="icon-hot1"></span>
                 <h3>火爆热卖</h3>
             </a>
-            <a href="#" class="icon-item">
+            <a href="#giftPackage" class="icon-item">
                 <span class="icon-gift_green"></span>
                 <h3>礼盒推荐</h3>
             </a>
@@ -94,12 +106,12 @@
     </nav>
     <!-- 分类图标 -->
     <!-- 新品尝鲜 -->
-    <section class="floor">
+    <section class="floor" id="newGoods">
         <h2>新品尝鲜</h2>
         <div class="productsList">
             <div class="productsItem">
                 <a href="productDetails.html">
-                    <img data-original="images/products/1.png" onerror="src='images/imgError.png'">
+                    <img data-original="images/products/1.png">
                     <h3>南非红西柚4粒装fasdffasdfasdfasd</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -108,8 +120,8 @@
                 </a>
             </div>
             <div class="productsItem">
-                <a href="#">
-                    <img data-original="images/products/2.png"  onerror="src='images/imgError.png'">
+                <a href="productDetails.html">
+                    <img data-original="images/products/2.png">
                     <h3>南非红西柚4粒装fasdfsadfasdfasdfa</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -118,8 +130,8 @@
                 </a>
             </div>
             <div class="productsItem">
-                <a href="#">
-                    <img data-original="images/products/3.png" onerror="src='images/imgError.png'">
+                <a href="productDetails.html">
+                    <img data-original="images/products/3.png">
                     <h3>南非红西柚4粒装fasdfsadfsdfsdafasd</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -128,8 +140,8 @@
                 </a>
             </div>
             <div class="productsItem">
-                <a href="#">
-                    <img data-original="images/products/4.png" onerror="src='images/imgError.png'">
+                <a href="productDetails.html">
+                    <img data-original="images/products/4.png">
                     <h3>南非红西柚4粒装</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -138,8 +150,8 @@
                 </a>
             </div>
             <div class="productsItem">
-                <a href="#">
-                    <img data-original="images/products/5.png" onerror="src='images/imgError.png'">
+                <a href="productDetails.html">
+                    <img data-original="images/products/5.png">
                     <h3>南非红西柚4粒装</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -148,8 +160,8 @@
                 </a>
             </div>
             <div class="productsItem">
-                <a href="#">
-                    <img data-original="images/products/6.png" onerror="src='images/imgError.png'">
+                <a href="productDetails.html">
+                    <img data-original="images/products/6.png" >
                     <h3>南非红西柚4粒装</h3>
                     <p class="clearfix">
                         <span class="price fl">￥26</span>
@@ -161,7 +173,7 @@
     </section>
     <!-- 新品尝鲜 -->
     <!-- 特惠抢购 -->
-    <section class="floor">
+    <section class="floor" id="indulgence">
         <h2>特惠抢购</h2>
         <div class="floor-item">
             <a href="#">
@@ -170,26 +182,26 @@
         </div>
         <div class="productsList">
             <ul>
-                <li>
+                <li class="clear">
                     <div class="productImg">
-                        <a href="#">
+                        <a href="productDetails.html">
                             <img data-original="images/products/11.png" onerror="src='images/loading-brank.jpg'">
                         </a>
                     </div>
                     <section class="productInfo">
-                        <a href="#">
+                        <a href="productDetails.html">
                             <h3 class="productTitle">南非西柚</h3>
                             <p class="description">VC能力满足你想象文字溢出测试</p>
                             <p>2个<span class="oldPrice">￥19.8</span></p>
                             <p>抢购价<span class="price">￥9.9</span></p>
                         </a>
                         <p>
-                            <button type="button" class="addCarBtn">加入购物车</button>
+                            <a href="#" class="addCarBtn">加入购物车</a>
                         </p>
                     </section>
                     </a>
                 </li>
-                <li>
+                <li class="clear">
                     <div class="productImg">
                         <a href="#">
                             <img data-original="images/products/12.png"  onerror="src='images/imgError.png'">
@@ -203,12 +215,12 @@
                             <p>抢购价<span class="price">￥9.9</span></p>
                         </a>
                         <p>
-                            <button type="button" class="addCarBtn">加入购物车</button>
+                            <a href="#" class="addCarBtn">加入购物车</a>
                         </p>
                     </section>
                     </a>
                 </li>
-                <li>
+                <li class="clear">
                     <div class="productImg">
                         <a href="#">
                             <img data-original="images/products/13.png" onerror="src='images/imgError.png'">
@@ -222,12 +234,12 @@
                             <p>抢购价<span class="price">￥9.9</span></p>
                         </a>
                         <p>
-                            <button type="button" class="addCarBtn">加入购物车</button>
+                            <a href="#" class="addCarBtn">加入购物车</a>
                         </p>
                     </section>
                     </a>
                 </li>
-                <li>
+                <li class="clear">
                     <div class="productImg">
                         <a href="#">
                             <img data-original="images/products/14.png" onerror="src='images/imgError.png'">
@@ -241,7 +253,7 @@
                             <p>抢购价<span class="price">￥9.9</span></p>
                         </a>
                         <p>
-                            <button type="button" class="addCarBtn">加入购物车</button>
+                            <a href="#" class="addCarBtn">加入购物车</a>
                         </p>
                     </section>
                     </a>
@@ -253,7 +265,7 @@
     </section>
     <!-- 特惠抢购 -->
     <!-- 火爆热卖 -->
-    <section class="floor goods">
+    <section class="floor goods" id="HOT">
         <h2>火爆热卖</h2>
         <div class="floor-item">
             <a href="#">
@@ -264,12 +276,12 @@
           <ul>
             <li class="goodsItem">
               <div class="col-4 goodsPic">
-                <a href="#">
+                <a href="productDetails.html">
                   <img data-original="images/products/6.png">
                 </a>
               </div>
               <div class="col-6 goodsInfo">
-                <a href="#">
+                <a href="productDetails.html">
                   <h3 class="goodsTitle">[热销]香甜脆爽的陕西洛川富士苹果10粒装(约5斤)</h3>
                   <p><span class="price">￥29</span><span class="oldPrice">￥39.9</span></p>
                 </a>
@@ -309,7 +321,7 @@
     </section>
     <!-- 火爆热卖 -->
     <!-- 礼盒推荐 -->
-    <section class="floor goods">
+    <section class="floor goods" id="giftPackage">
         <h2>礼盒推荐</h2>
         <div class="floor-item">
             <a href="#">
@@ -320,12 +332,12 @@
           <ul>
             <li class="goodsItem">
               <div class="col-4 goodsPic">
-                <a href="#">
+                <a href="productDetails.html">
                   <img data-original="images/products/111.jpg">
                 </a>
               </div>
               <div class="col-6 goodsInfo">
-                <a href="#">
+                <a href="productDetails.html">
                   <h3 class="goodsTitle">[热销]香甜脆爽的陕西洛川富士苹果10粒装(约5斤)</h3>
                   <p><span class="price">￥29</span><span class="oldPrice">￥39.9</span></p>
                 </a>

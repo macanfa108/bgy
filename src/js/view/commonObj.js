@@ -102,7 +102,7 @@ define(["jquery"], function($) {
             // console.log(total);
         },
         //选项卡复用函数
-        tabs: function(obj) {
+        tabs: function(obj,callback) {
             //选项卡切换
             var _index = 0;
             var tabsDom = obj;
@@ -111,14 +111,21 @@ define(["jquery"], function($) {
             tabsTitle.find('li').on("click", function() {
                 _index = $(this).index();
                 $(this).addClass('active').siblings().removeClass('active');
-                tabsDom.find('.tab-content:first .tab-item').eq(_index).show().siblings().hide();
+                tabsDom.find('.tab-content:first .tab-item').eq(_index).show()
+                .siblings().hide();
+                // 自定义回调函数，根据需要调用，可缺省
+                if(callback){
+                  callback();
+                }
             });
+
 
         },
         //动画添加购物车
         addCarAnimate:function(){
 
-          var number=3;//暂时先模拟购物车数量为3
+          /*分类页面：合理应该选择规格之后统计数量，暂时先模拟快捷加入购物车数量为1*/
+          var number=1;
 
           var productImg=$(this).parents("li").find("img"),//产品图
               carNumsDom=$("#navbar .carNums"),//购物车订单数量
@@ -139,12 +146,13 @@ define(["jquery"], function($) {
                     $fly.remove();
                     var carNums=carNumsDom.text()*1+number*1;
                     carNumsDom.text(carNums);
+                    //本地存储或存储到服务器操作，保持用户数据
                   });
                 })
               }
 
         },
-        //我的收藏页面滑动删除
+        //我的收藏页面滑动删除（动态设置页面布局，可优化）
         slideToDelete:function(){
           var linewrapper=$(".line-wrapper");
             // 设定每一行的宽度=屏幕宽度+按钮宽度
@@ -207,10 +215,14 @@ define(["jquery"], function($) {
                             }, 100); // 已经左滑状态的按钮右滑
                         lastLeftObj = pressedObj; // 记录上一个左滑的对象
                     } else if (diffX > 50) {
-                        $(pressedObj).animate({
-                            marginLeft: "0"
-                        }, 100); // 右滑
+                        // $(pressedObj).animate({
+                        //     marginLeft: "0"
+                        // }, 100); // 右滑
                         // lastLeftObj = null; // 清空上一个左滑的对象
+                        if (pressedObj == lastLeftObj) {
+                          $(pressedObj).animate({marginLeft:"0"}, 100); // 右滑
+                          lastLeftObj = null; // 清空上一个左滑的对象
+                        }
                     }
                 });
             }
@@ -235,24 +247,28 @@ define(["jquery"], function($) {
                             }, 100); // 已经左滑状态的按钮右滑
                         lastLeftObj = pressedObj; // 记录上一个左滑的对象
                     } else if (diffX > 50) {
-                        $(pressedObj).animate({
-                            marginLeft: "0"
-                        }, 100); // 右滑
-                        lastLeftObj = null; // 清空上一个左滑的对象
+                        // $(pressedObj).animate({
+                        //     marginLeft: "0"
+                        // }, 100); // 右滑
+                        // lastLeftObj = null; // 清空上一个左滑的对象
+                        if (pressedObj == lastLeftObj) {
+                          $(pressedObj).animate({marginLeft:"0"}, 100); // 右滑
+                          lastLeftObj = null; // 清空上一个左滑的对象
+                        }
                     }
                 });
             }
 
             //删除按钮事件绑定
             $(".line-btn-delete").on("click", function() {
-                console.log(0);
+                // console.log(0);
                 var This=$(this);
                 //layer插件
                 layer.open({
                     content: '您确定要删除该收藏吗？',
                     btn: ['确定', '取消'],
                     yes: function(index) {
-                      console.log("AJAX数据交互,成功后删除该项！");
+                      console.log("AJAX数据交互,成功后删除该项！否则关闭该弹窗后提示失败结果!");
                         This.parents(".line-wrapper").remove();
                         layer.close(index);
                     }
@@ -262,6 +278,7 @@ define(["jquery"], function($) {
 
             });
         }
+        // 我的收藏 end
 
     }
 });

@@ -1,39 +1,93 @@
 @charset "UTF-8";
 .discountCouponCon {
-    background: #f6f9fc;
+    // background: #f6f9fc;
     padding: 10px;
     width: 100%;
     // outline: 1px solid #000;
+    & .emptyCoupon {
+        text-align: center;
+        color: #999;
+        font-size: 1.6rem;
+        // display: none;
+    }
     & .coupon {
-      background:#76be0e;
-        // background: url("../images/icon2/discountCoupon.png") no-repeat;
-        background-position: left top;
-        background-size:cover;
-        outline: 1px solid red;
 
-        & .discountCouponText{
-          margin:10px auto;
-          width: 204px;
-          height: 118px;
-          border: 1px solid blue;
-          color:#fff;
-          & .value{
-            font-size: 6rem;
-            margin:20px 5px;
-          }
-          & .text{
-            font-size: 2rem;
-            margin:20px 5px 10px;
-          }
-          & .usableRange{
-            background:#fff;
-            color: #585e43;
-            font-size: 1.6rem;
-            font-weight: bold;
-            display: block;
-            padding:5px;
-            border-radius: 5px;
-          }
+        margin: 0 auto;
+        height: 133px;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        -webkit-background: radial-gradient(transparent 0, transparent 5px, #7EAB1E 5px);
+        background: radial-gradient(transparent 5px, transparent 5px, #7EAB1E 5px);
+        background-size: 16px 16px;
+        background-position: 9px 3px;
+        & .discountCouponText {
+            margin: 0 auto;
+            // width: 210px;
+            color: #fff;
+            padding: 5px 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -105px;
+            // outline: 1px solid blue;
+            & .dollar {
+                font-size: 3rem;
+                margin-top: 40px;
+            }
+            & .value {
+                font-size: 6rem;
+                margin: 10px 5px 0 0;
+            }
+            & .text {
+                font-size: 2rem;
+                margin: 10px 5px;
+            }
+            & .usableRange {
+                background: #fff;
+                color: #585e43;
+                font-size: 1.6rem;
+                font-weight: bold;
+                display: block;
+                padding: 5px;
+                border-radius: 5px;
+            }
         }
+        & .hoursOfUse {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        & .time {
+            margin: 7px auto;
+            display: inline-block;
+        }
+    }
+    & .coupon:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: #7EAB1E;
+        left: 5px;
+        right: 5px;
+    }
+    & .coupon.blueCoupon{
+      -webkit-background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
+      background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
+      background-size: 16px 16px;
+      background-position: 9px 3px;
+    }
+    & .coupon.blueCoupon:before{
+      background-color:#50ADD3;
+    }
+    & i {
+        position: absolute;
+        left: 30%;
+        top: 60px;
+        height: 190px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .15);
+        // transform: rotate(-30deg);
+        @include rotate(-30deg);
     }
 }

@@ -160,6 +160,7 @@ body {
     text-align: right;
     font-size: 1.4rem;
     color: #999;
+
     & a {
         text-align: right;
         font-size: 1.4rem;
@@ -191,7 +192,10 @@ body {
       border: none;
       color: #fff;
       border-radius: 3px;
-      padding: 10px 15px;
+      padding: 10px 10px;
+      background: #f87618;
+      width: 100px;
+      text-align: center;
     }
 }
 //火爆热卖
@@ -224,7 +228,11 @@ body {
             & .goodsTitle {
                 font-size: 1.6rem;
                 color: #3b3b3b;
-                padding-bottom: 25px;
+                padding-bottom: 45px;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             & .price {
                 font-size: 1.8rem;

@@ -145,7 +145,7 @@ gulp.task('script',function(){
       .pipe(concat('all.js'))
       // .pipe(gulp.dest('./dist/js'))
       // .pipe(rename('all.min.js'))
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(gulp.dest('./dist/js'));
 });
 //html压缩

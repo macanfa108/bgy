@@ -121,6 +121,10 @@
   text-align: center;
   border-radius: 5px; }
 
+.btn-primary {
+  border: 1px solid #ddd;
+  color: #999; }
+
 .btn-success {
   background: #75BE0D; }
 
@@ -167,6 +171,9 @@
 
 .icon-3x {
   font-size: 3rem; }
+
+.icon-6x {
+  font-size: 6rem; }
 
 .icon-white {
   color: #fff; }
@@ -956,7 +963,10 @@ body {
     border: none;
     color: #fff;
     border-radius: 3px;
-    padding: 10px 15px; }
+    padding: 10px 10px;
+    background: #f87618;
+    width: 100px;
+    text-align: center; }
 
 .goods a {
   width: 100%; }
@@ -980,7 +990,11 @@ body {
     .goods .goodsItem .goodsInfo .goodsTitle {
       font-size: 1.6rem;
       color: #3b3b3b;
-      padding-bottom: 25px; }
+      padding-bottom: 45px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
     .goods .goodsItem .goodsInfo .price {
       font-size: 1.8rem;
       color: #f87618;
@@ -1287,11 +1301,11 @@ body {
         color: #333; }
 
 .goodsCon {
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 45px; }
   .goodsCon .emptyCarCon {
     text-align: center;
-    padding: 10px 0px 0px;
-    display: none; }
+    padding: 10px 0px 0px; }
     .goodsCon .emptyCarCon .emptyTitle {
       font-size: 2rem;
       color: #666; }
@@ -1924,26 +1938,39 @@ body {
       color: #fff; }
 
 .discountCouponCon {
-  background: #f6f9fc;
   padding: 10px;
   width: 100%; }
+  .discountCouponCon .emptyCoupon {
+    text-align: center;
+    color: #999;
+    font-size: 1.6rem; }
   .discountCouponCon .coupon {
-    background: #76be0e;
-    background-position: left top;
-    background-size: cover;
-    outline: 1px solid red; }
+    margin: 0 auto;
+    height: 133px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    -webkit-background: radial-gradient(transparent 0, transparent 5px, #7EAB1E 5px);
+    background: radial-gradient(transparent 5px, transparent 5px, #7EAB1E 5px);
+    background-size: 16px 16px;
+    background-position: 9px 3px; }
     .discountCouponCon .coupon .discountCouponText {
-      margin: 10px auto;
-      width: 204px;
-      height: 118px;
-      border: 1px solid blue;
-      color: #fff; }
+      margin: 0 auto;
+      color: #fff;
+      padding: 5px 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -105px; }
+      .discountCouponCon .coupon .discountCouponText .dollar {
+        font-size: 3rem;
+        margin-top: 40px; }
       .discountCouponCon .coupon .discountCouponText .value {
         font-size: 6rem;
-        margin: 20px 5px; }
+        margin: 10px 5px 0 0; }
       .discountCouponCon .coupon .discountCouponText .text {
         font-size: 2rem;
-        margin: 20px 5px 10px; }
+        margin: 10px 5px; }
       .discountCouponCon .coupon .discountCouponText .usableRange {
         background: #fff;
         color: #585e43;
@@ -1952,6 +1979,39 @@ body {
         display: block;
         padding: 5px;
         border-radius: 5px; }
+    .discountCouponCon .coupon .hoursOfUse {
+      font-size: 1.6rem;
+      text-align: center; }
+    .discountCouponCon .coupon .time {
+      margin: 7px auto;
+      display: inline-block; }
+  .discountCouponCon .coupon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #7EAB1E;
+    left: 5px;
+    right: 5px; }
+  .discountCouponCon .coupon.blueCoupon {
+    -webkit-background: radial-gradient(transparent 0, transparent 5px, #50ADD3 5px);
+    background: radial-gradient(transparent 0, transparent 5px, #50ADD3 5px);
+    background-size: 16px 16px;
+    background-position: 9px 3px; }
+  .discountCouponCon .coupon.blueCoupon:before {
+    background-color: #50ADD3; }
+  .discountCouponCon i {
+    position: absolute;
+    left: 30%;
+    top: 60px;
+    height: 190px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
 
 .messageCon {
   background: #F0F0F0;
@@ -2192,6 +2252,87 @@ body .modify {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px; }
+
+.bindingCon {
+  text-align: center;
+  color: #323232;
+  font-size: 1.4rem;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 0px 30px; }
+  .bindingCon .tipsMsg {
+    color: #323232;
+    font-size: 1.4rem;
+    margin: 32px 0px 18px; }
+  .bindingCon .tipsAddvice {
+    color: #777;
+    font-size: 1.2rem;
+    margin-bottom: 24px; }
+  .bindingCon .selectBox {
+    border-bottom: 1px solid #76be0e;
+    position: relative;
+    line-height: 30px; }
+    .bindingCon .selectBox .iconfont {
+      position: absolute;
+      right: 2px;
+      top: 4px; }
+  .bindingCon .border-input {
+    border-bottom: 1px solid #76be0e;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #999; }
+    .bindingCon .border-input input {
+      display: block;
+      width: 100%;
+      padding: 5px 10px;
+      line-height: 30px; }
+  .bindingCon .securityCode {
+    padding-right: 150px;
+    position: relative; }
+  .bindingCon .btnCon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: inline-block;
+    padding: 11px 35px;
+    background: #ebebeb;
+    font-size: 1.4rem;
+    color: #999;
+    border: 1px solid #ddd;
+    border-radius: 3px; }
+  .bindingCon .btnCon:hover {
+    color: #c6fa7c;
+    background-color: #64a30a;
+    border-color: #69ae05; }
+
+.district {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  background: #fff; }
+
+.bindingSuccess {
+  padding: 0px 10px;
+  text-align: center;
+  font-weight: bold; }
+  .bindingSuccess .successImg {
+    display: block;
+    margin: 35px auto 22px;
+    width: 85px; }
+  .bindingSuccess .bindingPhoneNum {
+    color: #323232;
+    font-size: 1.5rem;
+    margin-bottom: 18px; }
+  .bindingSuccess .reminder {
+    color: #999;
+    font-size: 1.4rem;
+    margin-bottom: 35px; }
+
+.lostCon {
+  margin: 40px auto;
+  text-align: center; }
+  .lostCon img {
+    width: 80%; }
 
 @media screen and (max-width: 360px) {
   .discountCouponCon .specialOffers {

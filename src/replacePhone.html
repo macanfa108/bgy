@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="百果宴">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <!-- 百度禁止乱码 -->
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 不之别电话号码和邮件地址 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+
+    <!-- ios -->
+    <!--添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="百果宴" />
+    <!-- 启动webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <!-- 设置状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>百果宴</title>
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/layer.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- 头部标题栏 -->
+  <header id="header">
+      <div class="wrapper">
+          <div class="leftPart">
+              <a href="javascript:history.back();">
+                  <span class="iconfont icon-fanhui"></span>
+              </a>
+          </div>
+          <div class="title">
+              <h1>更换手机号</h1>
+          </div>
+          <div class="rightPart"></div>
+      </div>
+  </header>
+  <!-- 头部标题栏 -->
+  <!-- 绑定区域 -->
+  <div class="bindingCon">
+    <div class="tipsMsg">你正在更换手机号</div>
+    <div class="tipsAddvice">绑定手机号,提升账号安全性</div>
+    <!-- 表单 -->
+    <form action="#" id="replacePhone">
+      <div class="phoneBinding">
+        <div class="selectBox">
+          <select name="district" class="district">
+            <option value="+86" selected="selected">中国(+86)</option>
+            <option value="+886">台湾(+886)</option>
+            <option value="+852">香港(+852)</option>
+          </select>
+          <i class="iconfont icon-xiangyou icon-green"></i>
+        </div>
+        <div class="border-input">
+          <input type="text" placeholder="输入手机号"
+          jregex="/^1[3|4|5|7|8]\d{9}$/" jmessage="请输入正确的手机号码!!" jrequired="jrequired" jtip="请输入手机号码!!">
+        </div>
+        <div class="securityCode">
+          <div class="border-input codeBtn">
+            <input type="text" placeholder="输入验证码"
+            jrequired="jrequired" jtip="请输入手机验证码" jregex="/^\d{6}$/" jmessage="验证码格式不正确">
+          </div>
+            <a href="javascript:;" class="btnCon">发送验证码</a>
+        </div>
+      </div>
+      <!-- 错误消息提醒 -->
+      <div id="notice"></div>
+    </form>
+    <!-- 表单 -->
+    <!-- 按钮 -->
+    <a href="javascript:;" id="replacePhoneBtn" class="btn-block btn-success">确定</a>
+
+  </div>
+  <!-- 绑定区域 -->
+  <!-- 成功绑定区域 默认隐藏 -->
+  <div class="bindingSuccess">
+    <img src="images/icon2/bindingPhone.png"  class="successImg"  />
+    <p class="bindingPhoneNum">绑定的手机号码:13552888985</p>
+    <p class="reminder">已绑定,随时保护您的账号安全</p>
+    <a href="personalCenter.html" class="btn-block btn-success mt-10">完成</a>
+    <a href="replacePhone.html" class="btn-block btn-success mt-10">更换手机号</a>
+    <a href="javascript:;" class="btn-block btn-primary mt-10 unwrapBtn">解绑手机号</a>
+  </div>
+  <!-- 成功绑定区域 -->
+
+    <script src="js/lib/require.min.js" defer async="true" data-main="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

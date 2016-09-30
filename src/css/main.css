@@ -663,12 +663,13 @@ input {
         -ms-border-radius: 10px;
         border-radius: 10px;
         padding-left: 3rem;
+        font-size: 1.4rem;
         color: #999;
         padding: 0px 0px 0px 34px; }
       #header2 .wrapper .searchCon .posIcon {
         position: absolute;
         left: 10px;
-        top: 2px;
+        top: 4px;
         color: #999;
         display: inline-block;
         vertical-align: middle; }
@@ -1024,12 +1025,30 @@ body {
   width: 36px;
   height: 76px; }
 
+.loadMore {
+  text-align: center; }
+  .loadMore .loadMoreBtn {
+    display: block;
+    width: 33%;
+    padding: 12px 21px;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: #575757;
+    border: 1px solid #dcdcdc;
+    border-radius: 30px; }
+
 .productItem .titleAndPrice h1 {
   color: #3b3b3b;
-  font-size: 2rem; }
-.productItem .QRCode .codeInfo {
-  font-size: 1.2rem;
-  margin-top: 5px; }
+  font-size: 2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; }
+.productItem .QRCode {
+  text-align: right; }
+  .productItem .QRCode .codeInfo {
+    font-size: 1.2rem;
+    margin-top: 5px; }
 
 .info {
   margin: 15px auto;
@@ -1951,8 +1970,6 @@ body {
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
-    -webkit-background: radial-gradient(transparent 0, transparent 5px, #7EAB1E 5px);
-    background: radial-gradient(transparent 5px, transparent 5px, #7EAB1E 5px);
     background-size: 16px 16px;
     background-position: 9px 3px; }
     .discountCouponCon .coupon .discountCouponText {
@@ -1993,11 +2010,6 @@ body {
     background-color: #7EAB1E;
     left: 5px;
     right: 5px; }
-  .discountCouponCon .coupon.blueCoupon {
-    -webkit-background: radial-gradient(transparent 0, transparent 5px, #50ADD3 5px);
-    background: radial-gradient(transparent 0, transparent 5px, #50ADD3 5px);
-    background-size: 16px 16px;
-    background-position: 9px 3px; }
   .discountCouponCon .coupon.blueCoupon:before {
     background-color: #50ADD3; }
   .discountCouponCon i {

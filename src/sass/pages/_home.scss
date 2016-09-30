@@ -3,6 +3,7 @@ body {
     // padding-bottom: 50px;
     position: relative;
 }
+
 .nav-icon {
     background: #f6f6f6;
     margin: 0 auto;
@@ -268,4 +269,20 @@ body {
     bottom: 100px;
     width: 36px;
     height: 76px;
+}
+
+//加载更多按钮
+.loadMore{
+  text-align: center;
+
+  & .loadMoreBtn{
+    display: block;
+    width: 33%;
+    padding: 12px 21px;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: #575757;
+    border: 1px solid #dcdcdc;
+    border-radius: 30px;
+  }
 }

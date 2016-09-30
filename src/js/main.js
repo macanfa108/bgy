@@ -147,8 +147,9 @@ require(["jquery", "commonObj","validator", "layer","WebUploader","jquery.Swiper
 
           // 使用layer插件统一弹窗（操作成功提示如下）
           layer.open({
-            content: '恭喜,加入购物车成功!'
+            content: '恭喜,加入购物车成功 !'
             ,anim :'scale'
+            ,skin:'msg'
             ,time: 3 //3秒后自动关闭
           });
 
@@ -158,7 +159,7 @@ require(["jquery", "commonObj","validator", "layer","WebUploader","jquery.Swiper
         /*分类页面左右两栏选项卡*/
         commonObj.tabs($("#sortCon"),function(){// 自定义回调函数，根据需要调用，可缺省
 
-          //模拟滚动，实现懒加载的触发！
+          //隐藏图片的懒加载触发！
           $("img").lazyload({
             skip_invisible : true
           });
@@ -210,21 +211,6 @@ require(["jquery", "commonObj","validator", "layer","WebUploader","jquery.Swiper
             }
           });
         }
-
-        /*分类页面*/
-        /*图片懒加载:可以考虑多次实例化，使用不同的预览图*/
-        // $("img").lazyload({
-        //     placeholder: "images/85.jpg", //用图片提前占位
-        //     // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
-        //     effect: "fadeIn", // 载入使用何种效果
-        //     // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
-        //     threshold: 100, // 提前开始加载
-        //     // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
-        //     container: $("#sortCon"),  // 对某容器中的图片实现效果
-        //     // container,值为某容器.lazyload默认在拉动浏览器滚动条时生效,这个参数可以让你在拉动某DIV的滚动条时依次加载其中的图片
-        //     failurelimit: 10 // 图片排序混乱时
-        //         // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
-        // });
 
         /*表单验证页面*/
 

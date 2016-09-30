@@ -18,8 +18,8 @@
         margin-bottom: 20px;
         position: relative;
         overflow: hidden;
-        -webkit-background: radial-gradient(transparent 0, transparent 5px, #7EAB1E 5px);
-        background: radial-gradient(transparent 5px, transparent 5px, #7EAB1E 5px);
+        // -webkit-background: radial-gradient(transparent 0, transparent 5px, #7EAB1E 5px);
+        // background: radial-gradient(transparent 5px, transparent 5px, #7EAB1E 5px);
         background-size: 16px 16px;
         background-position: 9px 3px;
         & .discountCouponText {
@@ -72,10 +72,10 @@
         right: 5px;
     }
     & .coupon.blueCoupon{
-      -webkit-background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
-      background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
-      background-size: 16px 16px;
-      background-position: 9px 3px;
+      // -webkit-background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
+      // background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #50ADD3 5px);
+      // background-size: 16px 16px;
+      // background-position: 9px 3px;
     }
     & .coupon.blueCoupon:before{
       background-color:#50ADD3;

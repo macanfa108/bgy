@@ -4,9 +4,18 @@
         & h1 {
             color: #3b3b3b;
             font-size: 2rem;
+            // overflow: hidden;
+            // text-overflow:ellipsis;
+            // white-space: nowrap;
+            // width: 100%;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
         }
     }
     & .QRCode {
+      text-align: right;
         & .codeInfo {
             font-size: 1.2rem;
             margin-top: 5px;
